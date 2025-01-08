@@ -1,0 +1,1710 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>eLEARNING - eLearning HTML Template</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/academics.css" rel="stylesheet">
+
+    <style>
+        /* Prevent unwanted padding or margins in mobile view */
+        .container-fluid.p-0 {
+            margin-bottom: 0 !important;
+            padding: 0 !important;
+        }
+
+        /* Set consistent height for carousel items */
+        .owl-carousel-item {
+            background-color: white;
+            height: 100vh; /* Full viewport height */
+            max-height: 450px; /* Restrict height for smaller devices */
+            position: relative;
+            overflow: hidden;
+            border-radius: 35px;
+        }
+
+        /* Ensure images fully fit the carousel container */
+        .owl-carousel-item img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            border-radius: inherit;
+        }
+
+        /* Overlay adjustments */
+        .owl-carousel-item .position-absolute {
+            height: 100%;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(24, 29, 56, 0.7);
+            border-radius: inherit; /* Match the image's corners */
+        }
+
+        /* Remove grey space below carousel */
+        body, .container-fluid {
+            
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Hide navigation buttons */
+        .owl-nav {
+            display: none !important; /* Completely hides the navigation */
+        }
+
+        .carousel-inner img {
+            width: 100%;
+            height: auto;
+            border-radius: 20px;
+        }
+
+        .carousel {
+            margin: auto;
+            max-width: 1200px;
+        }
+
+        .carousel-item {
+            padding: 15px;
+            background: #f9f9f9;
+            border-radius: 20px;
+        }
+
+        /* Button Controls */
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 50%;
+        }
+
+
+        /* Special adjustments for mobile view */
+        @media (max-width: 768px) {
+            .owl-carousel-item {
+                height: 50vh; /* Adjust height for smaller screens */
+            }
+            .col-lg-4 img {
+            height: auto;
+            width: 100%; /* Ensure the image fits properly */
+            }
+            .carousel-item {
+                flex-direction: column;
+            }
+
+            .carousel-item img {
+                margin-bottom: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="mr-4">
+        <ul class="translation-links d-flex justify-content-end m-0 p-0" style="list-style-type: none">
+          <li class="mr-1">
+            <a id="english" data-lang="English" class="notranslate translation-lang text-gray active-lang" role="button" onclick="changeLanguage(this)" style="color: rgb(150, 145, 145);">English</a>
+          </li>
+          <li class="mr-1">
+            <a id="hindi" data-lang="hindi" class="notranslate translation-lang text-gray" role="button" onclick="changeLanguage(this)" style="color: rgb(150, 145, 145);">
+              &nbsp;| हिंदी
+            </a>
+          </li>
+          <li class="mr-1">
+            <a id="tamil" data-lang="Tamil" class="notranslate translation-lang text-gray" role="button" onclick="changeLanguage(this)" style="color: rgb(150, 145, 145);">
+              &nbsp;| தமிழ்
+            </a>
+          </li>
+          <li class="mr-1">
+            <a id="telugu" data-lang="Telugu" class="notranslate translation-lang text-gray" role="button" onclick="changeLanguage(this)" style="color: rgb(150, 145, 145);">
+              &nbsp;| తెలుగు</a>
+          </li>
+          <li class="mr-1">
+            <a id="malyalam" data-lang="Malayalam" class="notranslate translation-lang text-gray" role="button" onclick="changeLanguage(this)" style="color: rgb(150, 145, 145);">
+              &nbsp;| മലയാളം</a>
+          </li>
+          <li class="mr-1">
+            <a id="kannada" data-lang="Kannada" class="notranslate translation-lang text-gray" role="button" onclick="changeLanguage(this)" style="color: rgb(150, 145, 145);">
+              &nbsp;| ಕನ್ನಡ</a>
+          </li>
+          <li class="mr-1">
+            <a id="marathi" data-lang="Marathi" class="notranslate translation-lang text-gray" role="button" onclick="changeLanguage(this)" style="color: rgb(150, 145, 145);">
+              &nbsp;| मराठी</a>
+          </li>
+          <li class="mr-1">
+            <a id="gujrati" data-lang="Gujarati" class="notranslate translation-lang text-gray" role="button" onclick="changeLanguage(this)" style="color: rgb(150, 145, 145);">
+              &nbsp;| ગુજરાતી
+            </a>
+          </li>
+          <li>
+            <a id="Banga" data-lang="Bengali" class="notranslate translation-lang text-gray" role="button" onclick="changeLanguage(this)" style="color: rgb(150, 145, 145);">
+              &nbsp;| বাংলা</a>
+          </li>
+        </ul>
+      </div>
+
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+        <a class="navbar-brand mr-lg-5 pl-3" href="index.html" style="padding-left: 35px;">
+            <img style="height: 58px" src="https://study.iitm.ac.in/ds/assets/img/IITMOD-Logo.svg" alt="IIT Madras BS Degree Program">
+        </a>
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+                <a href="index.html" class="nav-item nav-link active" style="color: rgb(65, 62, 62);"><b>Home</b></a>
+            <div class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Academics</a>
+                <div class="dropdown-menu fade-down m-0 custom-dropdown-menu">
+                    <a href="academics.html" class="dropdown-item">Overall Structure</a>
+                    <a href="academics.html" class="dropdown-item">Term Structure</a>
+                    <a href="academics.html" class="dropdown-item">Course Registrations</a>
+                    <a href="academics.html" class="dropdown-item">Assessments</a>
+                    <hr class="custom-hr">
+                    <a href="academics.html" class="dropdown-item">Exam Cities</a>
+                    <hr class="custom-hr">
+                    <a href="academics.html" class="dropdown-item">Fee Structure</a>
+                    <hr class="custom-hr">
+                    <a href="academics.html" class="dropdown-item">Foundation Level</a>
+                    <a href="academics.html" class="dropdown-item">Diploma Level</a>
+                    <a href="academics.html" class="dropdown-item">BSc Degree Level</a>
+                    <a href="academics.html" class="dropdown-item">BS Degree Level</a>
+                    <hr class="custom-hr">
+                    <a href="academics.html" class="dropdown-item">Sample Certificates</a>
+                    <hr class="custom-hr">
+                    <a href="https://study.iitm.ac.in/ds/academic_calendar.html" class="dropdown-item">Academic Calendar</a>
+                </div>
+            </div>
+            <div class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Admissions</a>
+                <div class="dropdown-menu fade-down m-0 custom-dropdown-menu">
+                    <a href="https://study.iitm.ac.in/ds/admissions.html#AD0" class="dropdown-item">Important Dates</a>
+                    <a href="https://study.iitm.ac.in/ds/admissions.html#AD1" class="dropdown-item">Mandatory Requirements</a>
+                    <hr class="custom-hr">
+                    <a href="https://study.iitm.ac.in/ds/admissions.html#AD4" class="dropdown-item">Eligibility to Apply</a>
+                    <a href="https://study.iitm.ac.in/ds/admissions.html#AD5" class="dropdown-item">Application Process</a>
+                    <a href="https://study.iitm.ac.in/ds/admissions.html#AD6" class="dropdown-item">Admission to the Foundation Level</a>
+                    <hr class="custom-hr">
+                    <a href="https://study.iitm.ac.in/ds/admissions.html#AD7" class="dropdown-item">1. Regular Entry</a>
+                    <a href="https://study.iitm.ac.in/ds/admissions.html#AD8" class="dropdown-item">2. JEE-base Entry</a>
+                    <hr class="custom-hr">
+                    <a href="https://study.iitm.ac.in/ds/admissions.html#AD9" class="dropdown-item">International Students</a>
+                </div>
+            </div>
+            <div class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Resources</a>
+                <div class="dropdown-menu fade-down m-0 custom-dropdown-menu">
+                    <a href="https://study.iitm.ac.in/ds/helpvideos.html" class="dropdown-item">Help Videos</a>
+                    <hr class="custom-hr">
+                    <a href="https://study.iitm.ac.in/ds/inthemedia.html" class="dropdown-item">In the Media</a>
+                    <a href="https://study.iitm.ac.in/ds/archive.html" class="dropdown-item">Archive</a>
+                </div>
+            </div>
+            <div class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Student Life</a>
+                <div class="dropdown-menu fade-down m-0 custom-dropdown-menu">
+                    <a href="https://study.iitm.ac.in/ds/student_life.html" class="dropdown-item">Student Houses & Societies</a>
+                    <hr class="custom-hr">
+                    <a href="https://sites.google.com/ds.study.iitm.ac.in/paradox-23/home" class="dropdown-item">PARADOX / Student Festivals</a>
+                </div>
+            </div>
+            <div class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Achievements </a>
+                <div class="dropdown-menu fade-down m-0 custom-dropdown-menu">
+                    <a href="#" class="dropdown-item">Recognition</a>
+                    <a href="https://study.iitm.ac.in/student-achievements/toppers" class="dropdown-item">1. Topper Page</a>
+                    <a href="https://study.iitm.ac.in/student-achievements/projects" class="dropdown-item">2. Student's Best Projects</a>
+                    <a href="https://study.iitm.ac.in/student-achievements/interns" class="dropdown-item">3. Teaching Assistance</a>
+                    <a href="https://study.iitm.ac.in/student-achievements/alumni" class="dropdown-item">4. Alumni</a>
+                    <hr class="custom-hr">
+                    <a href="https://study.iitm.ac.in/ds/testimonials.html" class="dropdown-item">Testimonials</a>
+                    <hr class="custom-hr">
+                    <a href="https://sites.google.com/ds.study.iitm.ac.in/booksandpublications/home" class="dropdown-item">Research and Publication</a>
+                </div>
+            </div>
+            <a href="https://study.iitm.ac.in/ds/events.html" class="nav-item nav-link">Events</a>
+            <a href="https://study.iitm.ac.in/ds/faq.html" class="nav-item nav-link">FAQ</a>
+            <div class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">About IITM </a>
+                <div class="dropdown-menu fade-down m-0 custom-dropdown-menu">
+                    
+                    <a href="https://study.iitm.ac.in/ds/aboutIITM.html" class="dropdown-item">About IIT Madras</a>
+                    <a href="https://study.iitm.ac.in/ds/aboutIITM.html#FC" class="dropdown-item">Faculty Co-ordinators</a>
+                    <hr class="custom-hr">
+                    <a href="https://study.iitm.ac.in/ds/aboutIITM.html#footer" class="dropdown-item">Contact Us</a>
+                    <hr class="custom-hr">
+                    <a href="https://podgoodies.iitmadrasonline.in/" class="dropdown-item">Merchandise</a>
+                </div>
+            </div>
+            <a href="https://study.iitm.ac.in/ds/partnerships.html"class="nav-item nav-link">Partnerships</a>
+            <a href="https://study.iitm.ac.in/ds/placements/" class="nav-item nav-link">Placements</a>
+            <!--<a href="" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Join Now<i class="fa fa-arrow-right ms-3"></i></a>-->
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- About Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+                <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                    <h2 class="section-title bg-white text-center px-3">Overall Structure</h2>
+                    <p><b>There are four levels in the IIT Madras Degree program and to get the BS Degree in Data Science and Applications from IIT Madras, a <b style="color: #D6A64F;">learner has to successfully complete all four levels.</b></p>
+                    <p class="mb-4">There is also the <b style="color: #D6A64F;">flexibility to exit at any level.</b> Depending on the courses completed and credits earned, the learner can receive a Foundation Certificate from IITM CODE (Centre for Outreach and Digital Education) or Diploma(s) from IIT Madras or BSc Degree in Programming and Data Science from IIT Madras or BS Degree in Data Science and Applications from IIT Madras.</p>
+                </div>
+        </div>
+    </div>
+    <!-- About End -->
+
+    <!-- Road Map -->
+    <div class="container my-5">
+        <div class="row">
+            <div id="directorCarousel" class="carousel slide col-lg-12" data-bs-ride="carousel" data-bs-interval="4400">
+                <!-- Indicators -->
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#directorCarousel" data-bs-slide-to="0" class="active" aria-current="true"></button>
+                    <button type="button" data-bs-target="#directorCarousel" data-bs-slide-to="1"></button>
+                </div>
+                <!-- Carousel Items -->
+                <div class="carousel-inner" style="border-radius: 20px; overflow: hidden; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);">
+                    <!-- Slide 1 -->
+                    <div class="carousel-item active">
+                        <div class="row align-items-center">
+                            <div class="col-lg-4 col-md-6">
+                                <img src="img/roadmap.png" alt="Road Map" 
+                                    class="img-fluid rounded" 
+                                    style="height: 465px; width: 655px; cursor: pointer;" 
+                                    data-bs-toggle="modal" 
+                                    data-bs-target="#imageModal1">
+                            </div>
+                            <div class="col-lg-8 col-md-6">
+                                <h3 style="color: #A0332D;">Road Map</h3>
+                                <p>
+                                    <b style="color: #D6A64F;">Courses and Credits in Each Level:</b><br>
+                                    Foundation Level: 32 credits | 8 courses<br>
+                                    Diploma Level:<br>
+                                    - Programming: 27 credits | 6 courses + 2 projects<br>
+                                    - Data Science: 27 credits | 6 courses + 2 projects<br>
+                                    BSc Degree Level: 28 credits<br>
+                                    BS Degree Level: 28 credits<br>
+                                    <b style="color: #D6A64F;">Total credits to be earned to get:</b>
+                                    <br>
+                                    BSc Degree: 114 credits<br>
+                                    BS Degree: 142 credits<br>
+                                    <b style="color: #D6A64F;">Completion time: 4 - 8 years</b><br>
+                                    <b style="color: #D6A64F;">Fees:</b> Each term, pay only for courses you register for!<br>
+                                    <b style="color: #D6A64F;">Online Courses & Assignments:</b><br>
+                                    Duration: 12 weeks with 2-3 hrs of videos, questions, assignments.<br>
+                                    <b style="color: #D6A64F;">Quizzes and Exams:</b> In-person invigilated.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Slide 2 -->
+                    <div class="carousel-item">
+                        <div class="row align-items-center">
+                            <div class="col-lg-4 col-md-6">
+                                <img src="img/week_plan.png" alt="Week Plan" 
+                                    class="img-fluid rounded" 
+                                    style="height: 385px; width: 655px; cursor: pointer;" 
+                                    data-bs-toggle="modal" 
+                                    data-bs-target="#imageModal2">
+                            </div>
+                            <div class="col-lg-8 col-md-6">
+                                <h3 style="color: #A0332D;">Term Structure</h3>
+                                <p>
+                                    <br>
+                                    <i class="fa fa-check text-dark"></i>
+                                    Every year is divided into three terms of four months each: January, May, September.<br><br>
+                                    <i class="fa fa-check text-dark"></i>
+                                    Each term has 12 weeks of coursework, 2 quizzes, and end-term exams.<br>
+                                    Assessments include programming exams, mini-projects, vivas, and assignments.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Controls -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#directorCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#directorCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Road Map -->
+    <div class="modal fade" id="imageModal1" tabindex="-1" aria-labelledby="imageModalLabel1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <img src="img/roadmap.png" alt="Zoomed Road Map" class="img-fluid rounded">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Week Plan -->
+    <div class="modal fade" id="imageModal2" tabindex="-1" aria-labelledby="imageModalLabel2" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <img src="img/week_plan.png" alt="Zoomed Week Plan" class="img-fluid rounded">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Course Registations Start-->
+    <div class="container-xxl py-5">
+        <div class="container">
+                <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                    <h2 class="section-title bg-white text-center px-3">Course Registrations</h2>
+                    <p>
+                        In each term, a learner may register for upto 4 courses depending on their CCC (Credit Clearing Capability).<br><br>
+                        A learner’s CCC in the Foundation Level is calculated based on their performance in the Qualifier Exam or the previous term’s End Term Exams. The CCC in the Diploma Level and thereafter is 4.<br><br>
+                        All 8 courses in Foundation Level need to be successfully completed before registering for any Diploma Level course. Similarly, all Diploma Level courses & projects need to be successfully completed before registering for any Degree Level course.</p>
+                </div>
+        </div>
+    </div>
+    <!--Course Registration End-->
+
+    <!--Assessments Start-->
+    <div class="container my-5">
+        <div class="row">
+                <!-- Carousel Items -->
+                <div class="carousel-inner" style="border-radius: 20px; overflow: hidden; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);">
+                    <!-- Slide 1 -->
+                    <div class="carousel-item active">
+                        <div class="align-items-center">
+                            <div class="col-lg-8 col-md-6">
+                                <h3 style="color: #A0332D;">Assessments</h3>
+                                <p>
+                                    <b style="color: #D6A64F;">There are 3 types of assessments for each course:</b><br>
+                                    Weekly Assignments which are online<br>
+                                    monthly in-person Quizzes<br>
+                                    in-person End Term Exam<br>
+                                    <span style="cursor: pointer; color: #A0332D;" data-bs-toggle="modal" data-bs-target="#assessmentModal" class="font-weight-600">View More Details <i class="fas fa-chevron-right"></i></span><br><br>
+                                    In addition, assessments may include programming exams, mini projects, vivas, take home assignments, etc.<br>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="assessmentModal" tabindex="-1" aria-labelledby="assessmentModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="assessmentModalLabel">Assessment Details</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>There are 3 types of assessments for each course - online weekly assignments, monthly in-person invigilated quizzes, and an in-person invigilated end-term exam.</p>
+
+                    <div>
+                        <h2 class="section-title">1. Online Assignments</h2>
+                        <div class="content">
+                            <p><span class="checkmark">✔</span> A 12-week course will have one or more weekly assignments to be submitted online within the due date specified.</p>
+                            <p><span class="checkmark">✔</span> The average score of the best 5 out of the first 9 weekly assignments given during the course run should be >= 40/100 to be eligible to write the final exam and get the hall ticket for the same. (Score in any unattempted assignment will be counted as 0).</p>
+                            <p><span class="checkmark">✔</span> The scores obtained in these will be counted towards the Total Course Score T and will determine the eligibility to write the End Term Exam.</p>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h2 class="section-title">2. Two Invigilated Quizzes</h2>
+                        <div class="content">
+                            <p><span class="checkmark">✔</span> Two quizzes will be conducted at the end of Weeks 4 and 8 based on the content of Weeks 1-4 and 1-8 respectively.</p>
+                            <p><span class="checkmark">✔</span> Each quiz will be a single session exam with 4 hrs to attempt 4 subjects, 3 hrs to attempt 3 subjects, and 2 hrs to attempt 2 or 1 subject.</p>
+                            <p><span class="checkmark">✔</span> The score of a quiz not attempted will be taken as 0. No make-up quiz will be provided.</p>
+                            <p><span class="checkmark">✔</span> It is mandatory to attend at least one of the 2 quizzes. Else, the learner will not be eligible to write the final exam.</p>
+                            <p><span class="checkmark">✔</span> The Qualifier Exam Score will be counted as Quiz 1 score for the courses registered in the Foundation level only in the subsequent term of the Qualifier Exam.</p>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h2 class="section-title">3. End Term Exam</h2>
+                        <div class="content">
+                            <p><span class="checkmark">✔</span> At the end of a term, there will be an End Term Exam of 1.5 hours duration for each course. (This will ensure exams can be conducted only on Sundays and exams for 4 courses completed in 2 sessions of 3 hrs each throughout the program.)</p>
+                            <p><span class="checkmark">✔</span> 
+                                Eligibility to write the End Term Exam: Average weekly graded online assignment score >= 40/100 AND learner has appeared for at least one out of the two invigilated quizzes.</p>
+                            <p><span class="checkmark">✔</span> 
+                                If the above eligibility is not satisfied, the learner will not be allowed to write the End Term Exam and will have to repeat the full course.
+                            </p>
+                            <p><span class="checkmark">✔</span> 
+                                It is mandatory to attend at least one of the 2 quizzes. Else, the learner will not be eligible to write the final exam.
+                            </p>
+                            <p><span class="checkmark">✔</span> 
+                                The score obtained in the End Term Exam accounts for 50% of the Total Course Score T - called End Term Score (E).
+                            </p>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h2 class="section-title">Pass criteria for each course</h2>
+                        <div class="content">
+                            <p><span class="checkmark">✔</span> 
+                                Total Course Score (T) = Average Quiz Score Q (out of 50) + End Term Score E (out of 50)</p>
+                            <p><span class="checkmark">✔</span> 
+                                A candidate is deemed to have passed a course IF Total Course Score (T) >= 50/100.
+                                This criteria is the same for all learners in the course.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Assessments End-->
+
+    <!--Fee Structure Start-->
+    <div class="container-xxl py-5">
+        <div class="container">
+                <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                    <h2 class="section-title bg-white text-center px-3">Fee Structure</h2>
+                    <p>
+                        The IITM BS program strives to secure scholarships from CSR and Alumni donations for its students from socially and economically disadvantaged backgrounds to cover the full program fees.<br><br>
+                        
+                        As intermittent support till such donations are secured, IIT Madras covers part of the fees for the BS program students from socially and economically disadvantaged backgrounds.<br><br>
+                        
+                        <span style="cursor: pointer; color: #A0332D;" data-bs-toggle="modal" data-bs-target="#feestructureModal" class="font-weight-600">View More Details of Fees Structure <i class="fas fa-chevron-right"></i></span><br><br>
+                    </p>
+                </div>
+        </div>
+    </div>
+
+        <!-- Modal for Fees Structure Start -->
+        <div class="modal fade" id="feestructureModal" tabindex="-1" aria-labelledby="feestructureModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="assessmentModalLabel">Fee Structure </h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>
+                            For details about application fees, check Application Process in Admissions page.
+                        </p>
+    
+                        <div>
+                            <div class="content">
+                                <p><span class="checkmark">✔</span> A 
+                                    Each term, <u>pay only for the courses you register for in that specific term.
+                                </p></u>
+                                <table class="table table-responsive mb-4" style="font-size: 0.9rem; color: grey">
+                                    <thead class="text-dark">
+                                        <tr>
+                                            <th class="font-italic p-1" style="color: #d39e00;">Goal</th>
+                
+                                            <th class="font-italic p-1" style="color: #d39e00;">Total Credits</th>
+                
+                                            <th class="font-italic p-1" style="color: #d39e00;">Total Fees INR</th>
+                                        </tr>
+                                    </thead>
+                
+                                    <tbody>
+                                        <tr>
+                                            <td>Foundation Only</td>
+                
+                                            <td>32</td>
+                
+                                            <td>₹32,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Foundation + One Diploma</td>
+                
+                                            <td>59</td>
+                
+                                            <td>₹94,500</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Foundation + Two Diplomas</td>
+                
+                                            <td>86</td>
+                
+                                            <td>₹1,57,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>BSc Degree</td>
+                
+                                            <td>114</td>
+                
+                                            <td>₹2,21,000 - ₹2,27,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>BS Degree</td>
+                
+                                            <td>142</td>
+                
+                                            <td>₹3,15,000 - ₹3,51,000</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <p><span class="checkmark">✔</span> 
+                                    The IITM BS program strives to secure scholarships from CSR and Alumni donations for its students from socially and economically disadvantaged backgrounds to cover the full program fees.</p>
+                                <p><span class="checkmark">✔</span> As intermittent support till such donations are secured, IIT Madras covers part of the fees for the BS program students from socially and economically disadvantaged backgrounds.
+                                </p>
+                                <br>
+                                <p> The fraction of IIT Madras' fee support depends on the learner's category and family income and is given below:
+                                </p>
+                                <div class="table-responsive">
+                                    <table class="table table-bordered table-responsive-sm text-nowrap custom-table">
+                                        <thead class="text-dark">
+                                            <tr>
+                                                <th rowspan="2" class="align-middle" style="min-width: 120px;">Category</th>
+                                                <th colspan="2" class="text-warning text-center">Family Income &gt; 5 LPA</th>
+                                                <th colspan="2" class="text-warning text-center">Family Income &gt; 1 LPA and &lt;= 5 LPA</th>
+                                                <th colspan="2" class="text-warning text-center">Family Income &lt;= 1 LPA</th>
+                                            </tr>
+                                            <tr>
+                                                <th class="p-2 text-center">Fee Support</th>
+                                                <th class="p-2 text-center">Docs Required</th>
+                                                <th class="p-2 text-center">Fee Support</th>
+                                                <th class="p-2 text-center">Docs Required</th>
+                                                <th class="p-2 text-center">Fee Support</th>
+                                                <th class="p-2 text-center">Docs Required</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>General</td>
+                                                <td class="text-center">N/A</td>
+                                                <td class="text-center">NIL</td>
+                                                <td class="text-center">50%</td>
+                                                <td class="text-center">EWS + Family Income</td>
+                                                <td class="text-center">75%</td>
+                                                <td class="text-center">EWS + Family Income</td>
+                                            </tr>
+                                            <tr>
+                                                <td>OBC</td>
+                                                <td class="text-center">N/A</td>
+                                                <td class="text-center">NIL</td>
+                                                <td class="text-center">50%</td>
+                                                <td class="text-center">OBC-NCL + Family Income</td>
+                                                <td class="text-center">75%</td>
+                                                <td class="text-center">OBC-NCL + Family Income</td>
+                                            </tr>
+                                            <tr>
+                                                <td>SC / ST</td>
+                                                <td class="text-center">50%</td>
+                                                <td class="text-center">SC / ST</td>
+                                                <td class="text-center">50%</td>
+                                                <td class="text-center">SC / ST</td>
+                                                <td class="text-center">75%</td>
+                                                <td class="text-center">SC / ST + Family Income</td>
+                                            </tr>
+                                            <tr>
+                                                <td>PwD</td>
+                                                <td class="text-center">50%</td>
+                                                <td class="text-center">PwD</td>
+                                                <td class="text-center">50%</td>
+                                                <td class="text-center">PwD</td>
+                                                <td class="text-center">75%</td>
+                                                <td class="text-center">PwD + EWS / OBC-NCL + Family Income</td>
+                                            </tr>
+                                            <tr>
+                                                <td>SC / ST + PwD</td>
+                                                <td class="text-center">75%</td>
+                                                <td class="text-center">SC / ST + PwD</td>
+                                                <td class="text-center">75%</td>
+                                                <td class="text-center">SC / ST + PwD</td>
+                                                <td class="text-center">75%</td>
+                                                <td class="text-center">SC / ST + PwD</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                
+                                <br>
+                                <p><span class="checkmark">✔</span> 
+                                    The term family income for the purpose of availing IITM fee support includes the income of the candidate, the income of his/her parents and spouse, also the income of his/her siblings and children below the age of 18 years.
+                                    Family income certificate is not required while applying for the Degree program, but will be required to avail IITM fee support when joining the program. Download Family Income Certificate format
+                                </p>
+    
+                                <p><span class="checkmark">✔</span> OBC-NCL / EWS certificate, if applicable, need to be obtained in following format while applying:<br>
+                                    Download OBC-NCL Certificate format<br>
+                                    Download EWS Certificate format
+                                </p>
+    
+                                <p><span class="checkmark">✔</span> 
+                                    Note: If a learner does not pass a course in the term they registered for, they will need to repeat the entire course in a later term with re-payment of full course fee. If a learner completed all course requirements, but couldn't attend the end term exam alone, they can choose to repeat just the end term exam in the next term with the payment of an end term exam fee (₹1000 for foundation level courses; ₹2000 for diploma / degree level courses).
+                                </p>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" style="border-radius: 7px;">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Fees Structure End-->
+
+        <!-- Courses Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                <h6 class="section-title bg-white text-center px-3" style="color:#d39e00;">Academic Programs</h6>
+                <h6 class="mb-5">Explore Our Comprehensive Degree Pathways Designed for Your Success</h6>
+            </div>
+            <!--Foundation-->
+            <div class="row g-4 justify-content-center">
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="course-item bg-light">
+                        <div class="position-relative overflow-hidden">
+                            <img class="img-fluid" src="img/foundation.png" alt="">
+                        </div>
+                        <div class="text-center p-4 pb-0">
+                            <h5 class="mb-4">Foundation Level</h5>
+                            <span style="cursor: pointer; color: #A0332D;" data-bs-toggle="modal" data-bs-target="#foundationModal" class="font-weight-600">View More Details  <i class="fas fa-chevron-right"></i></span>
+                        </div>
+                        <div class="d-flex border-top">
+                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-book-open me-2" style="color: #7e7d7d;"></i>8 Courses</small>
+                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-clock me-2" style="color: #7e7d7d;"></i> 1 - 3 Year</small>
+                            <small class="flex-fill text-center py-2"><i class="fa-solid fa-indian-rupee-sign me-2" style="color: #7e7d7d;"></i> 32,000*</small>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal -->
+                <div class="modal fade" id="foundationModal" tabindex="-1" aria-labelledby="foundationModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-xl">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 class="modal-title" id="assessmentModalLabel"><b>Foundation Level</b> </h4>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <p>
+                                    The Foundation Level comprises courses in Mathematics, Statistics, Basics of Programming and Python, and English. These courses have been chosen to ensure that the learner who passes these successfully is well prepared to proceed to the Diploma Level courses.
+                                </p>
+
+                                <div>
+                                    <div class="content">
+                                        <div class="row mt-3 mb-5 justify-content-between">
+                                            <div class="col-12 col-md-7">
+                                                <p><span class="checkmark">✔</span> A 
+                                                    Requirements for registration
+                                                </p></u>
+                                                <p>
+                                                    The learner should apply for and clear the Qualifier Process.
+                                                </p>
+
+                                                <p><span class="checkmark">✔</span> A 
+                                                    Options on successful completion
+                                                </p>
+                                                <p>
+                                                    Learners have the following two options when they successfully complete all 8 Foundational Level courses:
+                                                </p>
+
+                                                <p>
+                                                    <i class="fa fa-dot-circle-o" aria-hidden="true"></i>
+                                                    <b>Exit:</b> The learner may exit with a Foundational Certificate from Centre for Outreach and Digital Education (CODE), IIT Madras.
+                                                </p>
+
+                                                <p>
+                                                    <i class="fa fa-dot-circle-o" aria-hidden="true"></i>
+                                                    <b>Proceed to next level:</b> The learner can join the Diploma Level.
+                                                </p>
+                                            </div>
+                                            <div class="col-12 col-sm-8 col-md-5">
+                                                <div class="py-3 px-3 py-pd-4 px-md-4 bg-light" style="border-radius: 10px">
+                                                    <div class="d-flex w-100 justify-content-between">
+                                                        <div style="flex-basis: 8%">
+                                                            <i class="fa fa-book-open" aria-hidden="true" style="color: gray;"></i>
+                                                        </div>
+                                    
+                                                        <div style="flex-basis: 89%">
+                                                            <p class="text-dark font-weight-600 mb-0"><b>8 courses</b></p>
+
+                                                            <p class="text-dark font-weight-500">32 credits</p>
+                                                        </div>
+                                                    </div>
+                                    
+                                                    <div class="d-flex w-100 justify-content-between">
+                                                        <div style="flex-basis: 8%">
+                                                            <i class="fa fa-clock" aria-hidden="true" style="color: gray;"></i>
+                                                        </div>
+                                    
+                                                        <div style="flex-basis: 89%">
+                                                            <p class="text-dark font-weight-600 mb-0"><b>1 - 3 years</b></p>
+                                    
+                                                            <p class="text-dark font-weight-500">10 hrs/course/week</p>
+                                                        </div>
+                                                    </div>
+                                    
+                                                    <div class="d-flex w-100 justify-content-between">
+                                                        <div style="flex-basis: 8%">
+                                                            <i class="fa fa-indian-rupee" aria-hidden="true" style="color: gray;"></i>
+                                                        </div>
+                                    
+                                                        <div style="flex-basis: 89%">
+                                                            <p class="text-dark font-weight-600 mb-0"><b>₹32,000*</b></p>
+                                    
+                                                            <p class="text-dark font-weight-500">*Refer <a href="#AC10">Fee Structure</a></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="table-responsive">
+                                            <table class="table border-bottom text-dark">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Course Name</th>
+                                                        <th>Credits</th>
+                                                        <th>Code</th>
+                                                        <th>Prerequisites</th>
+                                                        <th>Corequisites</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr class="table-hover-row" style="cursor: pointer" data-url="course_pages/BSMA1003.html"></tr>
+                                                    <tr class="table-hover-row" style="cursor: pointer" data-url="course_pages/BSMA1001.html">
+                                                        <td>Mathematics for Data Science I</td>
+                                                        <td class="font-italic" style="color: #8b8b8b">4</td>
+                                                        <td class="font-italic" style="color: #8b8b8b">BSMA1001</td>
+                                                        <td class="font-italic" style="color: #8b8b8b">None</td>
+                                                        <td class="font-italic" style="color: #8b8b8b">None</td>
+                                                        <td>
+                                                            <a class="float-right text-primary">
+                                                                <i class="fa fa-chevron-right" aria-hidden="true" style="color: #A0332D;"></i>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="table-hover-row" style="cursor: pointer" data-url="course_pages/BSMA1002.html">
+                                                        <td>Statistics for Data Science I</td>
+                                                        <td class="font-italic" style="color: #8b8b8b">4</td>
+                                                        <td class="font-italic" style="color: #8b8b8b">BSMA1002</td>
+                                                        <td class="font-italic" style="color: #8b8b8b">None</td>
+                                                        <td class="font-italic" style="color: #8b8b8b">None</td>
+                                                        <td>
+                                                            <a class="float-right text-primary">
+                                                                <i class="fa fa-chevron-right" aria-hidden="true" style="color: #A0332D;"></i>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="table-hover-row" style="cursor: pointer" data-url="course_pages/BSCS1001.html">
+                                                        <td>Computational Thinking</td>
+                                                        <td class="font-italic" style="color: #8b8b8b">4</td>
+                                                        <td class="font-italic" style="color: #8b8b8b">BSCS1001</td>
+                                                        <td class="font-italic" style="color: #8b8b8b">None</td>
+                                                        <td class="font-italic" style="color: #8b8b8b">None</td>
+                                                        <td>
+                                                            <a class="float-right text-primary">
+                                                                <i class="fa fa-chevron-right" aria-hidden="true" style="color: #A0332D;"></i>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="table-hover-row" style="cursor: pointer" data-url="course_pages/BSHS1001.html">
+                                                        <td>English I</td>
+                                                        <td class="font-italic" style="color: #8b8b8b">4</td>
+                                                        <td class="font-italic" style="color: #8b8b8b">BSHS1001</td>
+                                                        <td class="font-italic" style="color: #8b8b8b">None</td>
+                                                        <td class="font-italic" style="color: #8b8b8b">None</td>
+                                                        <td>
+                                                            <a class="float-right text-primary">
+                                                                <i class="fa fa-chevron-right" aria-hidden="true" style="color: #A0332D;"></i>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="table-hover-row" style="cursor: pointer" data-url="course_pages/BSMA1003.html">
+                                                        <td>Mathematics for Data Science II</td>
+                                                        <td class="font-italic" style="color: #8b8b8b">4</td>
+                                                        <td class="font-italic" style="color: #8b8b8b">BSMA1003</td>
+                                                        <td class="font-italic" style="color: #8b8b8b">BSMA1001</td>
+                                                        <td class="font-italic" style="color: #8b8b8b">None</td>
+                                                        <td>
+                                                            <a class="float-right text-primary">
+                                                                <i class="fa fa-chevron-right" aria-hidden="true" style="color: #A0332D;"></i>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="table-hover-row" style="cursor: pointer" data-url="course_pages/BSMA1004.html">
+                                                        <td>Statistics for Data Science II</td>
+                                                        <td class="font-italic" style="color: #8b8b8b">4</td>
+                                                        <td class="font-italic" style="color: #8b8b8b">BSMA1004</td>
+                                                        <td class="font-italic" style="color: #8b8b8b">BSMA1002, BSMA1001</td>
+                                                        <td class="font-italic" style="color: #8b8b8b">BSMA1003</td>
+                                                        <td>
+                                                            <a class="float-right text-primary">
+                                                                <i class="fa fa-chevron-right" aria-hidden="true" style="color: #A0332D;"></i>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="table-hover-row" style="cursor: pointer" data-url="course_pages/BSCS1002.html">
+                                                        <td>Programming in Python</td>
+                                                        <td class="font-italic" style="color: #8b8b8b">4</td>
+                                                        <td class="font-italic" style="color: #8b8b8b">BSCS1002</td>
+                                                        <td class="font-italic" style="color: #8b8b8b">BSCS1001</td>
+                                                        <td class="font-italic" style="color: #8b8b8b">None</td>
+                                                        <td>
+                                                            <a class="float-right text-primary">
+                                                                <i class="fa fa-chevron-right" aria-hidden="true" style="color: #A0332D;"></i>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="table-hover-row" style="cursor: pointer" data-url="course_pages/BSHS1002.html">
+                                                        <td>English II</td>
+                                                        <td class="font-italic" style="color: #8b8b8b">4</td>
+                                                        <td class="font-italic" style="color: #8b8b8b">BSHS1002</td>
+                                                        <td class="font-italic" style="color: #8b8b8b">BSHS1001</td>
+                                                        <td class="font-italic" style="color: #8b8b8b">None</td>
+                                                        <td>
+                                                            <a class="float-right text-primary">
+                                                                <i class="fa fa-chevron-right" aria-hidden="true" style="color: #A0332D;"></i>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" style="border-radius: 7px;">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Foundation End-->
+
+                <!--Diploma-->
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="course-item bg-light">
+                        <div class="position-relative overflow-hidden">
+                            <img class="img-fluid" src="img/diploma.png" alt="">
+                        </div>
+                        <div class="text-center p-4 pb-0">
+                            <h5 class="mb-4">Diploma Level</h5>
+                            <span style="cursor: pointer; color: #A0332D;" data-bs-toggle="modal" data-bs-target="#diplomaModal" class="font-weight-600">View More Details <i class="fas fa-chevron-right"></i></span>
+                        </div>
+                        <div class="d-flex border-top">
+                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-book-open me-2" style="color: #7e7d7d;"></i>12 Courses + 14 Projects</small>
+                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-clock me-2" style="color: #7e7d7d;"></i>1 - 3 Years</small>
+                            <small class="flex-fill text-center py-2"><i class="fa-solid fa-indian-rupee-sign me-2" style="color: #7e7d7d;"></i> 1,25,000</small>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modal -->
+                <div class="modal fade" id="diplomaModal" tabindex="-1" aria-labelledby="diplomaModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-xl">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 class="modal-title" id="assessmentModalLabel"><b>Diploma Level </b> </h4>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <p>
+                                    There are two sections in the Diploma Level with courses for Diploma in Programming and courses for Diploma in Data Science. Each of these diplomas comprises 5 core courses, 2 projects and 1 skill enhancement course.
+                                </p>
+
+                                <div>
+                                    <div class="content">
+                                        <div class="row mt-3 mb-5 justify-content-between">
+                                            <div class="col-12 col-md-7">
+                                                <p><span class="checkmark">✔</span> Requirements for registration</p>
+                                                <p>The learner should have cleared all 8 Foundation Level courses.</p>
+                                            
+                                                <p><span class="checkmark">✔</span> Options on successful completion</p>
+                                                <p>Learners have the following options based on the courses completed in this level:</p>
+                                            
+                                                <p><i class="fa fa-dot-circle-o" aria-hidden="true"></i>
+                                                    If a learner has completed all the courses and projects in Foundation Level and both Diplomas, they can proceed to the BSc Degree Level.
+                                                </p>
+                                            
+                                                <p><i class="fa fa-dot-circle-o" aria-hidden="true"></i>
+                                                    OR they may exit with a Diploma in Programming from IIT Madras.
+                                                </p>
+                                            
+                                                <!-- New Paragraphs -->
+                                                <p><i class="fa fa-dot-circle-o" aria-hidden="true"></i>
+                                                    OR they may exit with a Diploma in Data Science from IIT Madras.
+                                                </p>
+                                            
+                                                <p><i class="fa fa-dot-circle-o" aria-hidden="true"></i>                                          
+                                                    OR they may exit with both Diplomas from IIT Madras.
+                                                </p>
+                                            </div>
+                                            
+                                            <div class="col-12 col-sm-8 col-md-5">
+                                                <div class="py-3 px-3 py-pd-4 px-md-4 bg-light" style="border-radius: 10px">
+                                                    <div class="d-flex w-100 justify-content-between">
+                                                        <div style="flex-basis: 8%">
+                                                            <i class="fa fa-book-open" aria-hidden="true" style="color: gray;"></i>
+                                                        </div>
+                                    
+                                                        <div style="flex-basis: 89%">
+                                                            <p class="text-dark font-weight-600 mb-0"><b>12 courses + 4 projects</b></p>
+
+                                                            <p class="text-dark font-weight-500">54 credits</p>
+                                                        </div>
+                                                    </div>
+                                    
+                                                    <div class="d-flex w-100 justify-content-between">
+                                                        <div style="flex-basis: 8%">
+                                                            <i class="fa fa-clock" aria-hidden="true" style="color: gray;"></i>
+                                                        </div>
+                                    
+                                                        <div style="flex-basis: 89%">
+                                                            <p class="text-dark font-weight-600 mb-0"><b>1 - 3 years</b></p>
+                                    
+                                                            <p class="text-dark font-weight-500">15 hrs/course/week</p>
+                                                        </div>
+                                                    </div>
+                                    
+                                                    <div class="d-flex w-100 justify-content-between">
+                                                        <div style="flex-basis: 8%">
+                                                            <i class="fa fa-indian-rupee" aria-hidden="true" style="color: gray;"></i>
+                                                        </div>
+                                    
+                                                        <div style="flex-basis: 89%">
+                                                            <p class="text-dark font-weight-600 mb-0"><b>₹1,25,000*</b></p>
+                                    
+                                                            <p class="text-dark font-weight-500">*Refer <a href="#AC10">Fee Structure</a></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <h4 class="modal-title" id="assessmentModalLabel" style="color: #d39e00;"><b>Courses for Diploma in Programming </b> </h4>   
+                                        
+                                        <p>
+                                            The Diploma in Programming lays a sturdy foundation in databases and programming concepts with data structures and algorithms. The learner goes on to apply these in the building of a web application by the end of the diploma.
+                                        </p>
+
+                                        <div class="col-12 col-sm-8 col-md-5" style="width: 90%;">
+                                            <div class="py-3 px-3 py-pd-4 px-md-4 bg-light" style="border-radius: 10px">
+                                                <div class="d-flex w-100 justify-content-between">
+                                                    <div style="flex-basis: 8%">
+                                                        <i class="fa fa-book-open" aria-hidden="true" style="color: gray;"></i>
+                                                    </div>
+                                
+                                                    <div style="flex-basis: 89%">
+                                                        <p class="text-dark font-weight-600 mb-0"><b>6 courses + 2 projects</b></p>
+
+                                                        <p class="text-dark font-weight-500">27 credits</p>
+                                                    </div>
+                                                </div>
+                                
+                                                <div class="d-flex w-100 justify-content-between">
+                                                    <div style="flex-basis: 8%">
+                                                        <i class="fa fa-clock" aria-hidden="true" style="color: gray;"></i>
+                                                    </div>
+                                
+                                                    <div style="flex-basis: 89%">
+                                                        <p class="text-dark font-weight-600 mb-0"><b>1 - 2 years</b></p>
+                                
+                                                        <p class="text-dark font-weight-500">15 hrs/course/week</p>
+                                                    </div>
+                                                </div>
+                                
+                                                <div class="d-flex w-100 justify-content-between">
+                                                    <div style="flex-basis: 8%">
+                                                        <i class="fa fa-indian-rupee" aria-hidden="true" style="color: gray;"></i>
+                                                    </div>
+                                
+                                                    <div style="flex-basis: 89%">
+                                                        <p class="text-dark font-weight-600 mb-0"><b>₹62,500*</b></p>
+                                
+                                                        <p class="text-dark font-weight-500">*Refer <a href="#AC10">Fee Structure</a></p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+
+
+                                        <div class="table-responsive">
+                                            <table class="table border-bottom text-dark">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Course Name</th>
+                                                        <th>Credits</th>
+                                                        <th>Code</th>
+                                                        <th>Prerequisites</th>
+                                                        <th>Corequisites</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr class="table-hover-row" style="cursor: pointer" data-url="course_pages/BSMA1003.html"></tr>
+                                                    <tr class="table-hover-row" style="cursor: pointer" data-url="course_pages/BSMA1001.html">
+                                                        <td>Database Management Systems</td>
+                                                        <td class="font-italic" style="color: #8b8b8b">4</td>
+                                                        <td class="font-italic" style="color: #8b8b8b">BSCS2001</td>
+                                                        <td class="font-italic" style="color: #8b8b8b">None</td>
+                                                        <td class="font-italic" style="color: #8b8b8b">None</td>
+                                                        <td>
+                                                            <a class="float-right text-primary">
+                                                                <i class="fa fa-chevron-right" aria-hidden="true" style="color: #A0332D;"></i>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="table-hover-row" style="cursor: pointer" data-url="course_pages/BSMA1002.html">
+                                                        <td>Programming, Data Structures and Algorithms using Python</td>
+                                                        <td class="font-italic" style="color: #8b8b8b">4</td>
+                                                        <td class="font-italic" style="color: #8b8b8b">BSCS2002</td>
+                                                        <td class="font-italic" style="color: #8b8b8b">None</td>
+                                                        <td class="font-italic" style="color: #8b8b8b">None</td>
+                                                        <td>
+                                                            <a class="float-right text-primary">
+                                                                <i class="fa fa-chevron-right" aria-hidden="true" style="color: #A0332D;"></i>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="table-hover-row" style="cursor: pointer" data-url="course_pages/BSCS1001.html">
+                                                        <td>Modern Application Development I</td>
+                                                        <td class="font-italic" style="color: #8b8b8b">4</td>
+                                                        <td class="font-italic" style="color: #8b8b8b">BSCS2003</td>
+                                                        <td class="font-italic" style="color: #8b8b8b">None</td>
+                                                        <td class="font-italic" style="color: #8b8b8b">BSCS2001</td>
+                                                        <td>
+                                                            <a class="float-right text-primary">
+                                                                <i class="fa fa-chevron-right" aria-hidden="true" style="color: #A0332D;"></i>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="table-hover-row" style="cursor: pointer" data-url="course_pages/BSHS1001.html">
+                                                        <td>PROJECT: Modern Application Development 1 - Project</td>
+                                                        <td class="font-italic" style="color: #8b8b8b">2</td>
+                                                        <td class="font-italic" style="color: #8b8b8b">BSCS2003P</td>
+                                                        <td class="font-italic" style="color: #8b8b8b">None</td>
+                                                        <td class="font-italic" style="color: #8b8b8b">BSCS2003</td>
+                                                        <td>
+                                                            <a class="float-right text-primary">
+                                                                <i class="fa fa-chevron-right" aria-hidden="true" style="color: #A0332D;"></i>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="table-hover-row" style="cursor: pointer" data-url="course_pages/BSMA1003.html">
+                                                        <td>Programming Concepts using Java</td>
+                                                        <td class="font-italic" style="color: #8b8b8b">4</td>
+                                                        <td class="font-italic" style="color: #8b8b8b">BSCS2005</td>
+                                                        <td class="font-italic" style="color: #8b8b8b">None</td>
+                                                        <td class="font-italic" style="color: #8b8b8b">None</td>
+                                                        <td>
+                                                            <a class="float-right text-primary">
+                                                                <i class="fa fa-chevron-right" aria-hidden="true" style="color: #A0332D;"></i>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="table-hover-row" style="cursor: pointer" data-url="course_pages/BSMA1004.html">
+                                                        <td>Modern Application Development II</td>
+                                                        <td class="font-italic" style="color: #8b8b8b">4</td>
+                                                        <td class="font-italic" style="color: #8b8b8b">BSCS2006</td>
+                                                        <td class="font-italic" style="color: #8b8b8b">BSCS2003</td>
+                                                        <td class="font-italic" style="color: #8b8b8b">None</td>
+                                                        <td>
+                                                            <a class="float-right text-primary">
+                                                                <i class="fa fa-chevron-right" aria-hidden="true" style="color: #A0332D;"></i>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="table-hover-row" style="cursor: pointer" data-url="course_pages/BSCS1002.html">
+                                                        <td>PROJECT: Modern Application Development II - Project</td>
+                                                        <td class="font-italic" style="color: #8b8b8b">2</td>
+                                                        <td class="font-italic" style="color: #8b8b8b">BSCS2006P</td>
+                                                        <td class="font-italic" style="color: #8b8b8b">BSCS1001</td>
+                                                        <td class="font-italic" style="color: #8b8b8b">BSCS2006P</td>
+                                                        <td>
+                                                            <a class="float-right text-primary">
+                                                                <i class="fa fa-chevron-right" aria-hidden="true" style="color: #A0332D;"></i>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="table-hover-row" style="cursor: pointer" data-url="course_pages/BSHS1002.html">
+                                                        <td>System Commands</td>
+                                                        <td class="font-italic" style="color: #8b8b8b">3</td>
+                                                        <td class="font-italic" style="color: #8b8b8b">BSHS1002</td>
+                                                        <td class="font-italic" style="color: #8b8b8b">None</td>
+                                                        <td class="font-italic" style="color: #8b8b8b">None</td>
+                                                        <td>
+                                                            <a class="float-right text-primary">
+                                                                <i class="fa fa-chevron-right" aria-hidden="true" style="color: #A0332D;"></i>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+
+                                            <h4 class="modal-title" id="assessmentModalLabel" style="color: #d39e00;"><b>Courses for Diploma in Data Science</b> </h4>   
+                                        
+                                        <p>
+                                            The Diploma in Data Science exposes the learner to the holistic approach of gathering, analysing, and interpreting data for a variety of problems. The courses on Business Data lays down the context and the need for the data, while the Machine Learning courses equip the learner to use and analyse this data towards impactful conclusions.
+                                        </p>
+
+                                        <div class="col-12 col-sm-8 col-md-5" style="width: 90%;">
+                                            <div class="py-3 px-3 py-pd-4 px-md-4 bg-light" style="border-radius: 10px">
+                                                <div class="d-flex w-100 justify-content-between">
+                                                    <div style="flex-basis: 8%">
+                                                        <i class="fa fa-book-open" aria-hidden="true" style="color: gray;"></i>
+                                                    </div>
+                                
+                                                    <div style="flex-basis: 89%">
+                                                        <p class="text-dark font-weight-600 mb-0"><b>6 courses + 2 projects</b></p>
+
+                                                        <p class="text-dark font-weight-500">27 credits</p>
+                                                    </div>
+                                                </div>
+                                
+                                                <div class="d-flex w-100 justify-content-between">
+                                                    <div style="flex-basis: 8%">
+                                                        <i class="fa fa-clock" aria-hidden="true" style="color: gray;"></i>
+                                                    </div>
+                                
+                                                    <div style="flex-basis: 89%">
+                                                        <p class="text-dark font-weight-600 mb-0"><b>1 - 2 years</b></p>
+                                
+                                                        <p class="text-dark font-weight-500">15 hrs/course/week</p>
+                                                    </div>
+                                                </div>
+                                
+                                                <div class="d-flex w-100 justify-content-between">
+                                                    <div style="flex-basis: 8%">
+                                                        <i class="fa fa-indian-rupee" aria-hidden="true" style="color: gray;"></i>
+                                                    </div>
+                                
+                                                    <div style="flex-basis: 89%">
+                                                        <p class="text-dark font-weight-600 mb-0"><b>₹62,500*</b></p>
+                                
+                                                        <p class="text-dark font-weight-500">*Refer <a href="#AC10">Fee Structure</a></p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+
+
+                                        <div class="table-responsive">
+                                            <table class="table border-bottom text-dark">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Course Name</th>
+                                                        <th>Credits</th>
+                                                        <th>Code</th>
+                                                        <th>Prerequisites</th>
+                                                        <th>Corequisites</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr class="table-hover-row" style="cursor: pointer" data-url="course_pages/BSMA1003.html"></tr>
+                                                    <tr class="table-hover-row" style="cursor: pointer" data-url="course_pages/BSMA1001.html">
+                                                        <td>Machine Learning Foundations</td>
+                                                        <td class="font-italic" style="color: #8b8b8b">4</td>
+                                                        <td class="font-italic" style="color: #8b8b8b">BSCS2001</td>
+                                                        <td class="font-italic" style="color: #8b8b8b">None</td>
+                                                        <td class="font-italic" style="color: #8b8b8b">None</td>
+                                                        <td>
+                                                            <a class="float-right text-primary">
+                                                                <i class="fa fa-chevron-right" aria-hidden="true" style="color: #A0332D;"></i>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="table-hover-row" style="cursor: pointer" data-url="course_pages/BSMA1002.html">
+                                                        <td>Business Data Management</td>
+                                                        <td class="font-italic" style="color: #8b8b8b">4</td>
+                                                        <td class="font-italic" style="color: #8b8b8b">BSCS2002</td>
+                                                        <td class="font-italic" style="color: #8b8b8b">None</td>
+                                                        <td class="font-italic" style="color: #8b8b8b">None</td>
+                                                        <td>
+                                                            <a class="float-right text-primary">
+                                                                <i class="fa fa-chevron-right" aria-hidden="true" style="color: #A0332D;"></i>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="table-hover-row" style="cursor: pointer" data-url="course_pages/BSCS1001.html">
+                                                        <td>Machine Learning Techniques</td>
+                                                        <td class="font-italic" style="color: #8b8b8b">4</td>
+                                                        <td class="font-italic" style="color: #8b8b8b">BSCS2003</td>
+                                                        <td class="font-italic" style="color: #8b8b8b">None</td>
+                                                        <td class="font-italic" style="color: #8b8b8b">BSCS2001</td>
+                                                        <td>
+                                                            <a class="float-right text-primary">
+                                                                <i class="fa fa-chevron-right" aria-hidden="true" style="color: #A0332D;"></i>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="table-hover-row" style="cursor: pointer" data-url="course_pages/BSHS1001.html">
+                                                        <td>Machine Learning Practice</td>
+                                                        <td class="font-italic" style="color: #8b8b8b">2</td>
+                                                        <td class="font-italic" style="color: #8b8b8b">BSCS2003P</td>
+                                                        <td class="font-italic" style="color: #8b8b8b">None</td>
+                                                        <td class="font-italic" style="color: #8b8b8b">BSCS2003</td>
+                                                        <td>
+                                                            <a class="float-right text-primary">
+                                                                <i class="fa fa-chevron-right" aria-hidden="true" style="color: #A0332D;"></i>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="table-hover-row" style="cursor: pointer" data-url="course_pages/BSMA1003.html">
+                                                        <td>PROJECT: Machine Learning Practice - Project</td>
+                                                        <td class="font-italic" style="color: #8b8b8b">4</td>
+                                                        <td class="font-italic" style="color: #8b8b8b">BSCS2005</td>
+                                                        <td class="font-italic" style="color: #8b8b8b">None</td>
+                                                        <td class="font-italic" style="color: #8b8b8b">None</td>
+                                                        <td>
+                                                            <a class="float-right text-primary">
+                                                                <i class="fa fa-chevron-right" aria-hidden="true" style="color: #A0332D;"></i>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="table-hover-row" style="cursor: pointer" data-url="course_pages/BSMA1004.html">
+                                                        <td>Business Analytics</td>
+                                                        <td class="font-italic" style="color: #8b8b8b">4</td>
+                                                        <td class="font-italic" style="color: #8b8b8b">BSCS2006</td>
+                                                        <td class="font-italic" style="color: #8b8b8b">BSCS2003</td>
+                                                        <td class="font-italic" style="color: #8b8b8b">None</td>
+                                                        <td>
+                                                            <a class="float-right text-primary">
+                                                                <i class="fa fa-chevron-right" aria-hidden="true" style="color: #A0332D;"></i>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="table-hover-row" style="cursor: pointer" data-url="course_pages/BSCS1002.html">
+                                                        <td>Tools in Data Science</td>
+                                                        <td class="font-italic" style="color: #8b8b8b">2</td>
+                                                        <td class="font-italic" style="color: #8b8b8b">BSCS2006P</td>
+                                                        <td class="font-italic" style="color: #8b8b8b">BSCS1001</td>
+                                                        <td class="font-italic" style="color: #8b8b8b">BSCS2006P</td>
+                                                        <td>
+                                                            <a class="float-right text-primary">
+                                                                <i class="fa fa-chevron-right" aria-hidden="true" style="color: #A0332D;"></i>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" style="border-radius: 7px;">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Diploma End-->
+        
+            <!--Degree-->
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="course-item bg-light">
+                    <div class="position-relative overflow-hidden">
+                        <img class="img-fluid" src="img/bs_degree.png" alt="">
+                    </div>
+                    <div class="text-center p-4 pb-0">
+                        <h5 class="mb-4">Degree Level</h5>
+                        <span style="cursor: pointer; color: #A0332D;" data-bs-toggle="modal" data-bs-target="#degreeModal" class="font-weight-600">View More Details <i class="fas fa-chevron-right"></i></span>
+                    </div>
+                    <div class="d-flex border-top">
+                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-book-open me-2" style="color: #7e7d7d;"></i>BSc Degree</small>
+                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-clock me-2" style="color: #7e7d7d;"></i> 1 - 3 Years</small>
+                        <small class="flex-fill text-center py-2"><i class="fa-solid fa-indian-rupee-sign me-2" style="color: #7e7d7d;"></i> 64,000 - 70,000</small>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal -->
+            <div class="modal fade" id="degreeModal" tabindex="-1" aria-labelledby="degreeModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-xl">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title" id="assessmentModalLabel"><b>BSc Degree Level  </b> </h4>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p style="color: #d39e00;">
+                                For BSc in Programming and Data Science 
+                            </p>
+                            <!--BSc Degree-->
+                            <div>
+                                <div class="content">
+                                    <div class="row mt-3 mb-5 justify-content-between">
+                                        <div class="col-12 col-md-7">
+                                            <p><span class="checkmark">✔</span> Requirements for registration</p>
+                                            <p>The learner should have cleared all 8 courses in Foundation Level and all 12 courses + 4 projects in Diploma Level.</p>
+                                        
+                                            <p><span class="checkmark">✔</span> Options on successful completion</p>
+                                            <p>Learners have the following options based on the courses completed in this level:</p>
+                                        
+                                            <p><i class="fa fa-dot-circle-o" aria-hidden="true"></i>
+                                                They can proceed to the BS Degree Level.
+                                            </p>
+                                        
+                                            <p><i class="fa fa-dot-circle-o" aria-hidden="true"></i>
+                                                OR they may exit with a BSc Degree in Programming & Data Science from IIT Madras.
+                                            </p>
+                                        </div>
+                                        
+                                        <div class="col-12 col-sm-8 col-md-5">
+                                            <div class="py-3 px-3 py-pd-4 px-md-4 bg-light" style="border-radius: 10px">
+                                                <div class="d-flex w-100 justify-content-between">
+                                                    <div style="flex-basis: 8%">
+                                                        <i class="fa fa-book-open" aria-hidden="true" style="color: gray;"></i>
+                                                    </div>
+                                
+                                                    <div style="flex-basis: 89%">
+                                                        <p class="text-dark font-weight-600 mb-0"><b>BSc Degree Level
+                                                        </b></p>
+
+                                                        <p class="text-dark font-weight-500">28 credits (Total 114 credits)</p>
+                                                    </div>
+                                                </div>
+                                
+                                                <div class="d-flex w-100 justify-content-between">
+                                                    <div style="flex-basis: 8%">
+                                                        <i class="fa fa-clock" aria-hidden="true" style="color: gray;"></i>
+                                                    </div>
+                                
+                                                    <div style="flex-basis: 89%">
+                                                        <p class="text-dark font-weight-600 mb-0"><b>1 - 3 years</b></p>
+                                
+                                                        <p class="text-dark font-weight-500">15 hrs/course/week</p>
+                                                    </div>
+                                                </div>
+                                
+                                                <div class="d-flex w-100 justify-content-between">
+                                                    <div style="flex-basis: 8%">
+                                                        <i class="fa fa-indian-rupee" aria-hidden="true" style="color: gray;"></i>
+                                                    </div>
+                                
+                                                    <div style="flex-basis: 89%">
+                                                        <p class="text-dark font-weight-600 mb-0"><b>₹64,000 - ₹70,000*</b></p>
+                                
+                                                        <p class="text-dark font-weight-500">*Refer <a href="#AC10">Fee Structure</a></p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!--BS Degree-->
+                                    <h4 class="modal-title" id="assessmentModalLabel"><b>BS Degree Level </b> </h4>
+                                    <p style="color: #d39e00;">
+                                        For BS in Data Science and Applications 
+                                    </p>
+                                    <div class="content">
+                                        <div class="row mt-3 mb-5 justify-content-between">
+                                            <div class="col-12 col-md-7">
+                                                <p><span class="checkmark">✔</span> Requirements for registration</p>
+                                                <p>The learner should have earned 114 credits and completed the BSc Degree Level to enter the BS Degree Level.</p>
+                                            
+                                                <p><span class="checkmark">✔</span> <b>Exit</b></p>
+                                            
+                                                <p><i class="fa fa-dot-circle-o" aria-hidden="true"></i>
+                                                    Once the learner successfully completes 142 credits and the course requirements, they can exit with a BS Degree in Data Science and Applications from IIT Madras.
+                                                </p>
+                                            </div>
+                                            
+                                            <div class="col-12 col-sm-8 col-md-5">
+                                                <div class="py-3 px-3 py-pd-4 px-md-4 bg-light" style="border-radius: 10px">
+                                                    <div class="d-flex w-100 justify-content-between">
+                                                        <div style="flex-basis: 8%">
+                                                            <i class="fa fa-book-open" aria-hidden="true" style="color: gray;"></i>
+                                                        </div>
+                                    
+                                                        <div style="flex-basis: 89%">
+                                                            <p class="text-dark font-weight-600 mb-0"><b>BS Degree Level
+                                                            </b></p>
+
+                                                            <p class="text-dark font-weight-500">28 credits (Total 142 credits)</p>
+                                                        </div>
+                                                    </div>
+                                    
+                                                    <div class="d-flex w-100 justify-content-between">
+                                                        <div style="flex-basis: 8%">
+                                                            <i class="fa fa-clock" aria-hidden="true" style="color: gray;"></i>
+                                                        </div>
+                                    
+                                                        <div style="flex-basis: 89%">
+                                                            <p class="text-dark font-weight-600 mb-0"><b>1 - 3 years</b></p>
+                                    
+                                                            <p class="text-dark font-weight-500">15 hrs/course/week</p>
+                                                        </div>
+                                                    </div>
+                                    
+                                                    <div class="d-flex w-100 justify-content-between">
+                                                        <div style="flex-basis: 8%">
+                                                            <i class="fa fa-indian-rupee" aria-hidden="true" style="color: gray;"></i>
+                                                        </div>
+                                    
+                                                        <div style="flex-basis: 89%">
+                                                            <p class="text-dark font-weight-600 mb-0"><b>₹94,000 - ₹1,24,000*</b></p>
+                                    
+                                                            <p class="text-dark font-weight-500">*Refer <a href="#AC10">Fee Structure</a></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" style="border-radius: 7px;">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Courses End -->
+
+<!-- Certificate Section Start -->
+<div class="container-xxl py-5 category">
+    <div class="container">
+        <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+            <br><br><h3 class="section-title bg-white text-center px-3" style="color: #d39e00;">Sample Certificate</h3>
+        </div>
+        <div class="row g-3">
+            <!-- Certificates Row -->
+            <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.1s">
+                <a class="position-relative d-block overflow-hidden">
+                    <img class="img-fluid" src="img/foundation_certificate.png" alt="Certificate 1" data-bs-toggle="modal" data-bs-target="#foundationcertificateModal">
+                    <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin: 1px;">
+                        <h5 class="m-0">Foundation Certificate</h5>
+                        <small class="text-primary"></small>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.2s">
+                <a class="position-relative d-block overflow-hidden">
+                    <img class="img-fluid" src="img/diploma_datasci.png" alt="Certificate 2" data-bs-toggle="modal" data-bs-target="#diplomacertificateModal">
+                    <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin: 1px;">
+                        <h5 class="m-0">Diploma Certificate</h5>
+                        <small class="text-primary"></small>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.3s">
+                <a class="position-relative d-block overflow-hidden">
+                    <img class="img-fluid" src="img/bsc_certificate.png" alt="Certificate 3" data-bs-toggle="modal" data-bs-target="#bscdegreeModal">
+                    <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin: 1px;">
+                        <h5 class="m-0">BSc Degree Certificate</h5>
+                        <small class="text-primary"></small>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- Modal for Foundation Certificate -->
+    <div class="modal fade" id="foundationcertificateModal" tabindex="-1" aria-labelledby="foundationcertificateModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <img src="img/foundation_certificate.png" alt="Zoomed Road Map" class="img-fluid rounded">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Diploma Certificate -->
+    <div class="modal fade" id="diplomacertificateModal" tabindex="-1" aria-labelledby="diplomacertificateModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <img src="img/diploma_datasci.png" alt="Zoomed Road Map" class="img-fluid rounded">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for BSc Degree Certificate -->
+    <div class="modal fade" id="bscdegreeModal" tabindex="-1" aria-labelledby="bscdegreeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <img src="img/bsc_certificate.png" alt="Zoomed Road Map" class="img-fluid rounded">
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- Certificate Section End -->
+
+
+<!-- FAQ Start -->
+<div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
+    <div class="container">
+        <div class="text-center">
+            <h1 class="mb-5">F.A.Q</h1>
+        </div>
+        <div class="faq-carousel owl-carousel owl-theme">
+            <!-- FAQ Item 1 -->
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h5>Does IIT Madras offer B.Sc in Programming & Data Science on-campus?</h5>
+                </div>
+                <div class="faq-answer">
+                    <p>No, there is no equivalent on-campus version. IIT Madras has carefully curated this exclusively as an online program.</p>
+                </div>
+            </div>
+            <!-- FAQ Item 2 -->
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h5>Will those enrolled in this program have access to IIT Madras campus facilities?</h5>
+                </div>
+                <div class="faq-answer">
+                    <p>All our program courses are taught in English. Hence, we expect a minimum proficiency in English language to participate in the program.</p>
+                </div>
+            </div>
+            <!-- FAQ Item 3 -->
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h5>I am a CA / B.Com Graduate / Lawyer / B.Sc Graduate / Mechanical engineer / MBBS student and do not have any knowledge of coding. Does this course cover the basics of coding before progressing to advanced levels?</h5>
+                </div>
+                <div class="faq-answer">
+                    <p>It is not necessary to have prior knowledge of coding to learn from our program. Our program is structured in such a way that once a learner starts from the Foundational level and progresses towards the Degree level, in sequence, they will obtain sufficient proficiency in Programming and Data Science.</p>
+                </div>
+            </div>
+            <!-- FAQ Item 4 -->
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h5>How long will it take to complete the online degree program if I am working?</h5>
+                </div>
+                <div class="faq-answer">
+                    <p>The full program can take anywhere between 3 and 6 years to complete. On average, we anticipate that a learner studying part-time will finish the degree in 4 to 5 years. A diploma can potentially be obtained faster (around 8 months - 2 years). Check the Academics page to better understand the program structure.</p>
+                </div>
+            </div>
+        </div>
+        <div class="text-center">
+            <a class="btn btn-primary py-3 px-5 mt-2" href="https://study.iitm.ac.in/ds/faq.html" 
+                style="
+                    background: linear-gradient(135deg, rgba(192, 192, 192, 0.8), rgba(255, 255, 255, 0.5));
+                    border: 1px solid rgba(255, 255, 255, 0.3);
+                    border-radius: 10px;
+                    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+                    color: #000;
+                    text-decoration: none;
+                    display: inline-block;
+                ">
+                Read More
+            </a>
+        </div>
+    </div>
+</div>
+<!-- FAQ End -->
+        
+
+    <!-- Footer Start -->
+    <div class="container-fluid text-light footer custom-footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s" style="background-color: #B71006;">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div >
+                    <h4 class="text-white mb-3">Contact Us</h4>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>support@study.iitm.ac.in</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>7850999966</p>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>IITM BS Degree Office, 3rd Floor, ICSR Building, IIT Madras, Chennai - 600036</p>
+
+                    <span style="font-size: 13px;line-height: 0.54rem;">Please use ONLY the above methods for any queries regarding the program.
+                        Our normal response time is 3 working days. It might take a little longer during busy periods.
+                        We will share Google Meet links during such periods.
+                        Due to the high volume of calls we receive every day, there might be long wait times.
+                        In some cases, you might have to call multiple times to successfully connect to us. 
+                    </span>
+                    
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-outline-light btn-social" href="https://x.com/iitm_bs"><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://www.facebook.com/iitmadrasbsdegree"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://api.whatsapp.com/message/IVROM2UN7XIJL1?autoload=1&app_absent=0"><i class="fab fa-whatsapp"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://www.linkedin.com/company/iit-madras-bs-datascience-programme/"><i class="fab fa-linkedin-in"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://www.instagram.com/iitmadras_bs/"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="copyright">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; <a class="border-bottom" href="#">IIT Madras</a>, All Right Reserved.
+
+                        <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+                        <br>Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a><br><br>
+                        Distributed By <a class="border-bottom" href="https://themewagon.com">ThemeWagon</a>
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <div class="footer-menu">
+                            <a>Privacy Policy</a>
+                            <a>Terms of Service</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+.modal-body {
+    padding: 20px;
+}
+.section-title {
+    font-size: 1.5rem;
+    color: #d39e00;
+    font-weight: 700;
+    margin-top: 20px;
+}
+.content {
+    margin-left: 20px;
+}
+.content p, .content li {
+    margin-bottom: 10px;
+}
+.checkmark {
+    color: #28a745;
+    font-size: 1.2rem;
+}
+
+.font-italic {
+    font-style: italic;
+}
+
+.table-responsive {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch; /* Adds smooth scrolling on iOS */
+}

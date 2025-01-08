@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>eLEARNING - eLearning HTML Template</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <style>
+        /* Prevent unwanted padding or margins in mobile view */
+        .container-fluid.p-0 {
+            margin-bottom: 0 !important;
+            padding: 0 !important;
+        }
+
+        /* Set consistent height for carousel items */
+        .owl-carousel-item {
+            background-color: white;
+            height: 100vh; /* Full viewport height */
+            max-height: 450px; /* Restrict height for smaller devices */
+            position: relative;
+            overflow: hidden;
+            border-radius: 35px;
+        }
+
+        /* Ensure images fully fit the carousel container */
+        .owl-carousel-item img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            border-radius: inherit;
+        }
+
+        /* Overlay adjustments */
+        .owl-carousel-item .position-absolute {
+            height: 100%;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(24, 29, 56, 0.7);
+            border-radius: inherit; /* Match the image's corners */
+        }
+
+        /* Remove grey space below carousel */
+        body, .container-fluid {
+            
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Hide navigation buttons */
+        .owl-nav {
+            display: none !important; /* Completely hides the navigation */
+        }
+
+        .carousel-inner img {
+            width: 100%;
+            height: auto;
+            border-radius: 20px;
+        }
+
+        .carousel {
+            margin: auto;
+            max-width: 1200px;
+        }
+
+        .carousel-item {
+            padding: 15px;
+            background: #f9f9f9;
+            border-radius: 20px;
+        }
+
+        /* Button Controls */
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 50%;
+        }
+
+
+        /* Special adjustments for mobile view */
+        @media (max-width: 768px) {
+            .owl-carousel-item {
+                height: 50vh; /* Adjust height for smaller screens */
+            }
+            .col-lg-4 img {
+            height: auto;
+            width: 100%; /* Ensure the image fits properly */
+            }
+            .carousel-item {
+                flex-direction: column;
+            }
+
+            .carousel-item img {
+                margin-bottom: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="mr-4">
+        <ul class="translation-links d-flex justify-content-end m-0 p-0" style="list-style-type: none">
+          <li class="mr-1">
+            <a id="english" data-lang="English" class="notranslate translation-lang text-gray active-lang" role="button" onclick="changeLanguage(this)" style="color: rgb(150, 145, 145);">English</a>
+          </li>
+          <li class="mr-1">
+            <a id="hindi" data-lang="hindi" class="notranslate translation-lang text-gray" role="button" onclick="changeLanguage(this)" style="color: rgb(150, 145, 145);">
+              &nbsp;| हिंदी
+            </a>
+          </li>
+          <li class="mr-1">
+            <a id="tamil" data-lang="Tamil" class="notranslate translation-lang text-gray" role="button" onclick="changeLanguage(this)" style="color: rgb(150, 145, 145);">
+              &nbsp;| தமிழ்
+            </a>
+          </li>
+          <li class="mr-1">
+            <a id="telugu" data-lang="Telugu" class="notranslate translation-lang text-gray" role="button" onclick="changeLanguage(this)" style="color: rgb(150, 145, 145);">
+              &nbsp;| తెలుగు</a>
+          </li>
+          <li class="mr-1">
+            <a id="malyalam" data-lang="Malayalam" class="notranslate translation-lang text-gray" role="button" onclick="changeLanguage(this)" style="color: rgb(150, 145, 145);">
+              &nbsp;| മലയാളം</a>
+          </li>
+          <li class="mr-1">
+            <a id="kannada" data-lang="Kannada" class="notranslate translation-lang text-gray" role="button" onclick="changeLanguage(this)" style="color: rgb(150, 145, 145);">
+              &nbsp;| ಕನ್ನಡ</a>
+          </li>
+          <li class="mr-1">
+            <a id="marathi" data-lang="Marathi" class="notranslate translation-lang text-gray" role="button" onclick="changeLanguage(this)" style="color: rgb(150, 145, 145);">
+              &nbsp;| मराठी</a>
+          </li>
+          <li class="mr-1">
+            <a id="gujrati" data-lang="Gujarati" class="notranslate translation-lang text-gray" role="button" onclick="changeLanguage(this)" style="color: rgb(150, 145, 145);">
+              &nbsp;| ગુજરાતી
+            </a>
+          </li>
+          <li>
+            <a id="Banga" data-lang="Bengali" class="notranslate translation-lang text-gray" role="button" onclick="changeLanguage(this)" style="color: rgb(150, 145, 145);">
+              &nbsp;| বাংলা</a>
+          </li>
+        </ul>
+      </div>
+
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+        <a class="navbar-brand mr-lg-5 pl-3" href="index.html" style="padding-left: 35px;">
+            <img style="height: 58px" src="https://study.iitm.ac.in/ds/assets/img/IITMOD-Logo.svg" alt="IIT Madras BS Degree Program">
+        </a>
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+                <a href="index.html" class="nav-item nav-link active" style="color: rgb(65, 62, 62);"><b>Home</b></a>
+            <div class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Academics</a>
+                <div class="dropdown-menu fade-down m-0 custom-dropdown-menu">
+                    <a href="academics.html" class="dropdown-item">Overall Structure</a>
+                    <a href="academics.html" class="dropdown-item">Term Structure</a>
+                    <a href="academics.html" class="dropdown-item">Course Registrations</a>
+                    <a href="academics.html" class="dropdown-item">Assessments</a>
+                    <hr class="custom-hr">
+                    <a href="academics.html" class="dropdown-item">Exam Cities</a>
+                    <hr class="custom-hr">
+                    <a href="academics.html" class="dropdown-item">Fee Structure</a>
+                    <hr class="custom-hr">
+                    <a href="academics.html" class="dropdown-item">Foundation Level</a>
+                    <a href="academics.html" class="dropdown-item">Diploma Level</a>
+                    <a href="academics.html" class="dropdown-item">BSc Degree Level</a>
+                    <a href="academics.html" class="dropdown-item">BS Degree Level</a>
+                    <hr class="custom-hr">
+                    <a href="academics.html" class="dropdown-item">Sample Certificates</a>
+                    <hr class="custom-hr">
+                    <a href="https://study.iitm.ac.in/ds/academic_calendar.html" class="dropdown-item">Academic Calendar</a>
+                </div>
+            </div>
+            <div class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Admissions</a>
+                <div class="dropdown-menu fade-down m-0 custom-dropdown-menu">
+                    <a href="https://study.iitm.ac.in/ds/admissions.html#AD0" class="dropdown-item">Important Dates</a>
+                    <a href="https://study.iitm.ac.in/ds/admissions.html#AD1" class="dropdown-item">Mandatory Requirements</a>
+                    <hr class="custom-hr">
+                    <a href="https://study.iitm.ac.in/ds/admissions.html#AD4" class="dropdown-item">Eligibility to Apply</a>
+                    <a href="https://study.iitm.ac.in/ds/admissions.html#AD5" class="dropdown-item">Application Process</a>
+                    <a href="https://study.iitm.ac.in/ds/admissions.html#AD6" class="dropdown-item">Admission to the Foundation Level</a>
+                    <hr class="custom-hr">
+                    <a href="https://study.iitm.ac.in/ds/admissions.html#AD7" class="dropdown-item">1. Regular Entry</a>
+                    <a href="https://study.iitm.ac.in/ds/admissions.html#AD8" class="dropdown-item">2. JEE-base Entry</a>
+                    <hr class="custom-hr">
+                    <a href="https://study.iitm.ac.in/ds/admissions.html#AD9" class="dropdown-item">International Students</a>
+                </div>
+            </div>
+            <div class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Resources</a>
+                <div class="dropdown-menu fade-down m-0 custom-dropdown-menu">
+                    <a href="https://study.iitm.ac.in/ds/helpvideos.html" class="dropdown-item">Help Videos</a>
+                    <hr class="custom-hr">
+                    <a href="https://study.iitm.ac.in/ds/inthemedia.html" class="dropdown-item">In the Media</a>
+                    <a href="https://study.iitm.ac.in/ds/archive.html" class="dropdown-item">Archive</a>
+                </div>
+            </div>
+            <div class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Student Life</a>
+                <div class="dropdown-menu fade-down m-0 custom-dropdown-menu">
+                    <a href="https://study.iitm.ac.in/ds/student_life.html" class="dropdown-item">Student Houses & Societies</a>
+                    <hr class="custom-hr">
+                    <a href="https://sites.google.com/ds.study.iitm.ac.in/paradox-23/home" class="dropdown-item">PARADOX / Student Festivals</a>
+                </div>
+            </div>
+            <div class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Achievements </a>
+                <div class="dropdown-menu fade-down m-0 custom-dropdown-menu">
+                    <a href="#" class="dropdown-item">Recognition</a>
+                    <a href="https://study.iitm.ac.in/student-achievements/toppers" class="dropdown-item">1. Topper Page</a>
+                    <a href="https://study.iitm.ac.in/student-achievements/projects" class="dropdown-item">2. Student's Best Projects</a>
+                    <a href="https://study.iitm.ac.in/student-achievements/interns" class="dropdown-item">3. Teaching Assistance</a>
+                    <a href="https://study.iitm.ac.in/student-achievements/alumni" class="dropdown-item">4. Alumni</a>
+                    <hr class="custom-hr">
+                    <a href="https://study.iitm.ac.in/ds/testimonials.html" class="dropdown-item">Testimonials</a>
+                    <hr class="custom-hr">
+                    <a href="https://sites.google.com/ds.study.iitm.ac.in/booksandpublications/home" class="dropdown-item">Research and Publication</a>
+                </div>
+            </div>
+            <a href="https://study.iitm.ac.in/ds/events.html" class="nav-item nav-link">Events</a>
+            <a href="https://study.iitm.ac.in/ds/faq.html" class="nav-item nav-link">FAQ</a>
+            <div class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">About IITM </a>
+                <div class="dropdown-menu fade-down m-0 custom-dropdown-menu">
+                    
+                    <a href="https://study.iitm.ac.in/ds/aboutIITM.html" class="dropdown-item">About IIT Madras</a>
+                    <a href="https://study.iitm.ac.in/ds/aboutIITM.html#FC" class="dropdown-item">Faculty Co-ordinators</a>
+                    <hr class="custom-hr">
+                    <a href="https://study.iitm.ac.in/ds/aboutIITM.html#footer" class="dropdown-item">Contact Us</a>
+                    <hr class="custom-hr">
+                    <a href="https://podgoodies.iitmadrasonline.in/" class="dropdown-item">Merchandise</a>
+                </div>
+            </div>
+            <a href="https://study.iitm.ac.in/ds/partnerships.html"class="nav-item nav-link">Partnerships</a>
+            <a href="https://study.iitm.ac.in/ds/placements/" class="nav-item nav-link">Placements</a>
+            <!--<a href="" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Join Now<i class="fa fa-arrow-right ms-3"></i></a>-->
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+
+    <!-- Carousel Start -->
+
+<div class="container-fluid p-0 mb-0">
+    <div class="owl-carousel header-carousel position-relative" >
+        <div class="owl-carousel-item position-relative">
+            <img class="img-fluid rounded" src="img\iitm_video_1.jpg" alt="" style="height: 100%; width: 100%; object-fit: cover; border-radius: 20px;">
+            <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center">
+                <div class="container">
+                    <div class="row justify-content-start">
+                        <div class="col-sm-10 col-lg-8">
+                            <b><h2 class="text-uppercase mb-3 animated slideInDown" style="color: white;">DATA SCIENCE</h2></b>
+                            <h1 class="display-3 text-white animated slideInDown">IIT Madras</h1>
+                            <p class="fs-5 text-white mb-4 pb-2">
+                                IIT Madras, India's top technical institute, welcomes you to the world's first 4-year Bachelor of Science (BS) Degree in Data Science and Applications with options to exit earlier in the foundation, diploma, or BSc degree level.
+                            </p>
+                            <br>
+                            <a href="https://www.youtube.com/watch?v=lEMtlAqlJww&t=3s"><img src="img/play_button.png" alt="VIDEO" style="height: 60px; width: 60px;"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="owl-carousel-item position-relative">
+            <img class="img-fluid rounded" src="img\iitm_video_3.jpg" alt="" style="height: 100%; width: 100%; object-fit: cover; border-radius: 20px;">
+            <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(24, 29, 56, .7);">
+                <div class="container">
+                    <div class="row justify-content-start">
+                        <div class="col-sm-10 col-lg-8">
+                            <h5 class="text-primary text-uppercase mb-3 animated slideInDown">Best Online Courses</h5>
+                            <h1 class="display-3 text-white animated slideInDown">The Best Online Learning Platform</h1>
+                            <br>
+                            <a href="https://www.youtube.com/watch?v=VeNHdAPH-9A"><img src="img/play_button.png" alt="VIDEO" style="height: 60px; width: 60px;"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="owl-carousel-item position-relative">
+            <img class="img-fluid rounded" src="img\iitm_video_1.jpg" alt="" style="height: 100%; width: 100%; object-fit: cover; border-radius: 20px;">
+            <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center">
+                <div class="container">
+                    <div class="row justify-content-start">
+                        <div class="col-sm-10 col-lg-8">
+                            <h1 class="display-3 text-white animated slideInDown">IITM’s Experience in Online Education</h1>
+                            <p class="fs-5 text-white mb-4 pb-2">
+                                IITM is well-equipped to provide an online degree course. We have been ranked number 1 Engineering Institute for the past 5 years and we have been ranked number 1 Overall for the past 2 years by NIRF.
+                            </p>
+                            <br>
+                            <a href="https://www.youtube.com/watch?v=b0wrLw-Qyl0"><img src="img/play_button.png" alt="VIDEO" style="height: 60px; width: 60px;"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <!-- Carousel End -->
+
+<!-- Director Section Start -->
+<div class="container my-5">
+    <div class="row">
+        <div id="directorCarousel" class="carousel slide col-lg-12" data-bs-ride="carousel" data-bs-interval="4400">
+            <!-- Indicators -->
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#directorCarousel" data-bs-slide-to="0" class="active" aria-current="true" ></button>
+                <button type="button" data-bs-target="#directorCarousel" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#directorCarousel" data-bs-slide-to="2"></button>
+                <button type="button" data-bs-target="#directorCarousel" data-bs-slide-to="3"></button>
+                <button type="button" data-bs-target="#directorCarousel" data-bs-slide-to="4"></button>
+                <button type="button" data-bs-target="#directorCarousel" data-bs-slide-to="5"></button>
+            </div>
+            <!-- Carousel Items -->
+            <div class="carousel-inner" style="border-radius: 20px; overflow: hidden; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);">
+                <!-- Slide 1 -->
+                <div class="carousel-item active">
+                    <div class="row align-items-center">
+                        <div class="col-lg-4 col-md-6">
+                            <a href="img/iitm_director.png"><img src="img/iitm_director.png"
+                                 alt="Director Image"
+                                 class="img-fluid rounded" style="height: 265px; width: 755px;"></a>
+                        </div>
+                        <div class="col-lg-8 col-md-6">
+                            <h3 style="color: #A0332D;">Message from Director</h3>
+                            <p>
+                                <b style="color: #D6A64F;">IIT Madras started this unique BS program to provide access to IIT quality education to the learners across the country.</b> Data Science is a growing field, and the demand for skilled resources in the market is very high. IIT Madras has a rich history of providing high-quality education and this program is designed to underline the fact that IIT is within the reach of everyone. This BS program is meticulously drafted and is aligned with the goals of the National Educational Policy.<br>
+                                <b>We are planning to make IIT Madras a <b style="color: #D6A64F;">'Vishwa-guru(Gloabal Teacher)'</b> through innovative approaches to enhance the quality of education.</b> In order to support the students from financially disadvantaged backgrounds to pursue this program, scholarships are being povided.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Slide 2 -->
+                <div class="carousel-item">
+                    <div class="row align-items-center">
+                        <div class="col-lg-4 col-md-6">
+                            <a href="img/grp_photo.png"><img src="img/full_photo.png" alt="Alternate Image" class="img-fluid rounded" style="height: 265px;"></a>
+                        </div>
+                        <div class="col-lg-8 col-md-6">
+                            <h3 style="color: #A0332D;">29000+ Students studying in the program</h3>
+                            <p>
+                                For the first time, you can work towards an undergraduate degree / diploma from an IIT regardless of your age, location, or academic backgrounds.
+                                More than 29000 students currently studying with us in the program.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Slide 3 -->
+                <div class="carousel-item">
+                    <div class="row align-items-center">
+                        <div class="col-lg-4 col-md-6">
+                            <a href="img/bstopper.png"><img src="img/acadamic_topper.png" alt="Vision Image" class="img-fluid rounded" style="height: 265px;"></a> 
+                        </div>
+                        <div class="col-lg-8 col-md-6">
+                            <h3 style="color: #A0332D;">Toppers of the BS Degree Program</h3>
+                            <p>
+                                IIT Madras BS in Data Science and Applications recognizes and awards those who have displayed exemplary academic performance at each level of the degree. <br><b style="color: #D6A64F;">There are 3 categories under which the students are classfied:</b>
+                                <br>
+                                <b>Highest Scores:</b> Students with the highest CGPA at each level
+                                <br>
+                                <b>Certificate of Academic Distinction:</b> Those with a CGPA greater than 9.5
+                                <br>
+                                <b>Certificate of Merit:</b> Those with a CGPA greater than 9.0
+                                <br>
+                                These students are recognized and awarded on stage by the Director of IITM at the Annual Student Fest - Paradox
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!--Slide 4-->
+                <div class="carousel-item">
+                    <div class="row align-items-center">
+                        <div class="col-lg-4 col-md-6">
+                            <a href="img/life_outside_academics.png"><img src="img/paradox.png" alt="Vision Image" class="img-fluid rounded" style="height: 265px;"></a> 
+                        </div>
+                        <div class="col-lg-8 col-md-6">
+                            <h3 style="color: #A0332D;">PARADOX / Student Festivals</h3>
+                            <p>
+                                <b style="color: #D6A64F;">Paradox’23</b> - Curated and organized by the IIT Madras BS Degree Programme students, Paradox’23 was a four-day event held from the 25th of May to the 28th of May 2023.
+                                <br> 
+                                <b style="color: #D6A64F;">More than 2800 students from different parts of India visited the IIT Madras campus and participated in various interactive, technical, professional, cultural and sports activities curated for them.</b>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!--Slide 5-->
+                <div class="carousel-item">
+                    <div class="row align-items-center">
+                        <div class="col-lg-4 col-md-6">
+                            <a href="img/faculty.png"><img src="img/teachers.png" alt="Vision Image" class="img-fluid rounded" style="height: 265px;"></a> 
+                        </div>
+                        <div class="col-lg-8 col-md-6">
+                            <h3 style="color: #A0332D;">Study from World Class Faculty</h3>
+                            <p>
+                                Our institute's online learning program is led by a faculty that delivers high-quality education through expertly crafted digital content. With engaging pre-recorded lectures, comprehensive study materials, and responsive support, the faculty ensures a seamless learning experience. Their commitment to clarity, accessibility, and addressing diverse learning needs empowers students to thrive at their own pace, anytime and anywhere.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!--Slide 6-->
+                <div class="carousel-item">
+                    <div class="row align-items-center">
+                        <div class="col-lg-4 col-md-6">
+                            <a href="img/graduates.png"><img src="img/graduates_1.png" alt="Vision Image" class="img-fluid rounded" style="height: 265px;"></a> 
+                        </div>
+                        <div class="col-lg-8 col-md-6">
+                            <h3  style="color: #A0332D;">Alumni's of the BS Degree Program</h3>
+                            <p>
+                                <b style="color:#D6A64F;">About the Alumni Network:</b> <b>IIT Madras BS Degree Alumni Network is dedicated to fostering lifelong relationships with and among our alumni.</b> We aim to support our graduates through a range of services and resources, including career support, exclusive events, and continuous learning opportunities. Our mission is to build a global network of engaged and successful alumni who contribute positively to society and support the university's mission.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Controls -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#directorCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#directorCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+</div>
+<!-- Director Section End -->
+
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="row g-4">
+                <!-- First Box -->
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="service-item text-center pt-3">
+                        <div class="p-4">
+                            <i class="fa fa-3x fa-book-open mb-3" style="color: #D6A64F;"></i>
+                            <h2 style="font-size: 2rem; color: #D6A64F;">20,000+</h2>
+                            <h4 class="mt-2">Students doing this program along with another degree</h4>
+                        </div>
+                    </div>
+                </div>
+                <!-- Second Box -->
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="service-item text-center pt-3">
+                        <div class="p-4">
+                            <i class="fa fa-3x fa-globe mb-3" style="color: #D6A64F;"></i>
+                            <h2 style="font-size: 2rem; color: #D6A64F;">3000+</h2>
+                            <h4 class="mt-2">Working Professionals studying in the program</h4>
+                        </div>
+                    </div>
+                </div>
+                <!-- Third Box -->
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="service-item text-center pt-3">
+                        <div class="p-4">
+                            <i class="fa fa-3x fa-graduation-cap mb-3" style="color: #D6A64F;"></i>
+                            <h2 style="font-size: 2rem; color: #D6A64F;">850+</h2>
+                            <h4 class="mt-2">Secured Admission to Masters/PhD programs within and outside India</h4>
+                        </div>
+                    </div>
+                </div>
+                <!-- Fourth Box -->
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
+                    <div class="service-item text-center pt-3">
+                        <div class="p-4">
+                            <i class="fa fa-3x fa-trophy mb-3" style="color: #D6A64F;"></i>
+                            <h2 style="font-size: 2rem; color: #D6A64F;">20+</h2>
+                            <h4 class="mt-2">BS students in Top 100 Ranks of GATE Exam 2024</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    
+    <!-- Service End -->
+
+
+    <!-- About Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+                <!--<div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">
+                    <div class="position-relative h-100">
+                        <img src="img/iitm_online (2).png" alt="" style="object-fit: cover;">
+                    </div>
+                </div>-->
+                <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                    <h3 class="section-title bg-white text-center px-3" style="color: #A0332D;">About Us</h3>
+                    <h1 class="mb-5">Welcome to IIT Madras BS Degree Course</h1>
+                    <p><b>IIT Madras offers four-year BS programmes that aim to provide quality education to all, irrespective of age, educational background, or location. The programmes are carefully designed to impart industry-relevant skills through rigorous coursework, hands-on training, and projects.</p>
+                    <p class="mb-4">The content in BS programmes is delivered online, whereas the quizzes and exams are conducted in person at exam centres across India and abroad. This allows students to learn from anywhere, irrespective of geographical location. The in-person exams ensure academic rigour and fairly assess the quality of training. The curriculum, academic rigour, and quality of the programme are on par with regular degree programmes offered by IIT Madras.</b></p>
+                    <a class="btn btn-primary py-3 px-5 mt-2" href="https://www.iitm.ac.in/academics/study-at-iitm/non-campus-bs-programmes#:~:text=Overview,%2Don%20training%2C%20and%20projects." 
+                    style="
+                         background: linear-gradient(135deg, rgba(192, 192, 192, 0.8), rgba(255, 255, 255, 0.5));
+                         border: 1px solid rgba(255, 255, 255, 0.3);
+                         border-radius: 10px;
+                         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+                         color: #000;
+                         text-decoration: none;
+                         display: inline-block;
+                    ">
+                    Read More
+                 </a>
+                </div>
+        </div>
+    </div>
+    <!-- About End -->
+
+
+    <!-- Present Start -->
+    <div class="container-xxl py-5 category">
+        <div class="container">
+            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                <h4 class="section-title bg-white text-center px-3" style="color: #A0332D;">BSc/Diploma in Data Science</h3>
+                <h1 class="mb-5">Transforming Education with Flexibility and Excellence</h1>
+            </div>
+            <div class="row g-3">
+                <div class="col-lg-7 col-md-6">
+                    <div class="row g-3">
+                        <div class="col-lg-12 col-md-12 wow zoomIn" data-wow-delay="0.1s">
+                            <a class="position-relative d-block overflow-hidden" href="https://drive.google.com/file/d/1R-gxbRSJOiFbJGhwNFqSgNy2mMI2o0LC/view">
+                                <img class="img-fluid" src="img/present_1.png" alt="">
+                                <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin: 1px;">
+                                    <h5 class="m-0">IIT Madras</h5>
+                                    <small class="text-primary">Presents</small>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-lg-6 col-md-12 wow zoomIn" data-wow-delay="0.3s">
+                            <a class="position-relative d-block overflow-hidden" href="https://drive.google.com/file/d/1R-gxbRSJOiFbJGhwNFqSgNy2mMI2o0LC/view">
+                                <img class="img-fluid" src="img/present_2.png" alt="">
+                            </a>
+                        </div>
+                        <div class="col-lg-6 col-md-12 wow zoomIn" data-wow-delay="0.5s">
+                            <a class="position-relative d-block overflow-hidden" href="https://drive.google.com/file/d/1R-gxbRSJOiFbJGhwNFqSgNy2mMI2o0LC/view">
+                                <img class="img-fluid" src="img/present_3.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5 col-md-6 wow zoomIn" data-wow-delay="0.7s" style="min-height: 350px;">
+                    <a class="position-relative d-block h-100 overflow-hidden" href="https://drive.google.com/file/d/1R-gxbRSJOiFbJGhwNFqSgNy2mMI2o0LC/view">
+                        <img class="img-fluid position-absolute w-100 h-100" src="img/present_4.jpg" alt="" style="object-fit: cover;">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Present End -->
+
+
+    <!-- Courses Start -->
+    <!--<div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                <h6 class="section-title bg-white text-center text-primary px-3">Courses</h6>
+                <h1 class="mb-5">Popular Courses</h1>
+            </div>
+            <div class="row g-4 justify-content-center">
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="course-item bg-light">
+                        <div class="position-relative overflow-hidden">
+                            <img class="img-fluid" src="img/course-1.jpg" alt="">
+                            <div class="w-100 d-flex justify-content-center position-absolute bottom-0 start-0 mb-4">
+                                <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">Read More</a>
+                                <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3" style="border-radius: 0 30px 30px 0;">Join Now</a>
+                            </div>
+                        </div>
+                        <div class="text-center p-4 pb-0">
+                            <h3 class="mb-0">$149.00</h3>
+                            <div class="mb-3">
+                                <small class="fa fa-star text-primary"></small>
+                                <small class="fa fa-star text-primary"></small>
+                                <small class="fa fa-star text-primary"></small>
+                                <small class="fa fa-star text-primary"></small>
+                                <small class="fa fa-star text-primary"></small>
+                                <small>(123)</small>
+                            </div>
+                            <h5 class="mb-4">Web Design & Development Course for Beginners</h5>
+                        </div>
+                        <div class="d-flex border-top">
+                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-user-tie text-primary me-2"></i>John Doe</small>
+                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-clock text-primary me-2"></i>1.49 Hrs</small>
+                            <small class="flex-fill text-center py-2"><i class="fa fa-user text-primary me-2"></i>30 Students</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="course-item bg-light">
+                        <div class="position-relative overflow-hidden">
+                            <img class="img-fluid" src="img/course-2.jpg" alt="">
+                            <div class="w-100 d-flex justify-content-center position-absolute bottom-0 start-0 mb-4">
+                                <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">Read More</a>
+                                <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3" style="border-radius: 0 30px 30px 0;">Join Now</a>
+                            </div>
+                        </div>
+                        <div class="text-center p-4 pb-0">
+                            <h3 class="mb-0">$149.00</h3>
+                            <div class="mb-3">
+                                <small class="fa fa-star text-primary"></small>
+                                <small class="fa fa-star text-primary"></small>
+                                <small class="fa fa-star text-primary"></small>
+                                <small class="fa fa-star text-primary"></small>
+                                <small class="fa fa-star text-primary"></small>
+                                <small>(123)</small>
+                            </div>
+                            <h5 class="mb-4">Web Design & Development Course for Beginners</h5>
+                        </div>
+                        <div class="d-flex border-top">
+                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-user-tie text-primary me-2"></i>John Doe</small>
+                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-clock text-primary me-2"></i>1.49 Hrs</small>
+                            <small class="flex-fill text-center py-2"><i class="fa fa-user text-primary me-2"></i>30 Students</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="course-item bg-light">
+                        <div class="position-relative overflow-hidden">
+                            <img class="img-fluid" src="img/course-3.jpg" alt="">
+                            <div class="w-100 d-flex justify-content-center position-absolute bottom-0 start-0 mb-4">
+                                <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">Read More</a>
+                                <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3" style="border-radius: 0 30px 30px 0;">Join Now</a>
+                            </div>
+                        </div>
+                        <div class="text-center p-4 pb-0">
+                            <h3 class="mb-0">$149.00</h3>
+                            <div class="mb-3">
+                                <small class="fa fa-star text-primary"></small>
+                                <small class="fa fa-star text-primary"></small>
+                                <small class="fa fa-star text-primary"></small>
+                                <small class="fa fa-star text-primary"></small>
+                                <small class="fa fa-star text-primary"></small>
+                                <small>(123)</small>
+                            </div>
+                            <h5 class="mb-4">Web Design & Development Course for Beginners</h5>
+                        </div>
+                        <div class="d-flex border-top">
+                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-user-tie text-primary me-2"></i>John Doe</small>
+                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-clock text-primary me-2"></i>1.49 Hrs</small>
+                            <small class="flex-fill text-center py-2"><i class="fa fa-user text-primary me-2"></i>30 Students</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>-->
+    <!-- Courses End -->
+
+
+    <!-- Team Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                <h3 class="section-title bg-white text-center px-3" style="color: #A0332D;">Program Features</h3>
+                <h1 class="mb-5">Designed for Excellence and Accessibility</h1>
+            </div>
+            <div class="row g-4">
+                <!--First-->
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="team-item" style="background-color: transparent; border-radius: 7px;">
+                        <div class="overflow-hidden team-item">
+                            <img class="img-fluid" src="img/trophy.png" alt="" style="height: 140px;">
+                            <h5 class="mb-0">Best Online Program</h5>
+                            <p>Awarded by <b style="color: #D6A64F;">QS Reimagine Education & The Wharton School, University of Pennsylvania</b></p>
+                        </div>
+                    </div>
+                </div>
+                <!--Second-->
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="team-item" style="background-color: transparent; border-radius: 7px;">
+                        <div class="overflow-hidden team-item">
+                            <img class="img-fluid" src="img/scholorship.png" alt="" style="height: 140px;">
+                            <h5 class="mb-0">Scholarship</h5>
+                            <p>Learners from 5LPA eligible for up to 75% fee waivers. 2000+ students study for free</p>
+                        </div>
+                    </div>
+                </div>
+                <!--Third-->
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="team-item" style="background-color: transparent; border-radius: 7px;">
+                        <div class="overflow-hidden team-item">
+                            <img class="img-fluid" src="img/age_limit.png" alt="" style="height: 140px;">
+                            <h5 class="mb-0">No Age Limit</h5>
+                            <p>Learners from any age and any where in the world can study in this program. <b style="color: #D6A64F;">Current age of learners : 17 to 81 years</b></p>
+                        </div>
+                    </div>
+                </div>
+                <!--Forth-->
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="team-item" style="background-color: transparent; border-radius: 7px;">
+                        <div class="overflow-hidden team-item">
+                            <img class="img-fluid" src="img/study_mode.png" alt="" style="height: 140px;">
+                            <h5 class="mb-0">Mode of Study</h5>
+                            <p>Pre-recorded and synchronous sessions, Weekly Online Assignments, In-person quizzes</p>
+                        </div>
+                    </div>
+                </div>
+                <!--Fifth-->
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="team-item" style="background-color: transparent; border-radius: 7px;">
+                        <div class="overflow-hidden team-item">
+                            <img class="img-fluid" src="img/ds_course.png" alt="" style="height: 140px;">
+                            <h5 class="mb-0">Data Science Courses</h5>
+                            <p>ML Foundations, Deep Learning, Reinforcement Learning, Computer Vision, LLMs, Big Data</p>
+                        </div>
+                    </div>
+                </div>
+                <!--Sixth-->
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="team-item" style="background-color: transparent; border-radius: 7px;">
+                        <div class="overflow-hidden team-item">
+                            <img class="img-fluid" src="img/programming_course.png" alt="" style="height: 140px;">
+                            <h5 class="mb-0">Programming Courses</h5>
+                            <p>Python, Java, PostGreSQL, Linux commands, C programming, Full Stack Application Development</p>
+                        </div>
+                    </div>
+                </div>
+                <!--Seventh-->
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="team-item" style="background-color: transparent; border-radius: 7px;">
+                        <div class="overflow-hidden team-item">
+                            <img class="img-fluid" src="img/framework.png" alt="" style="height: 140px;">
+                            <h5 class="mb-0">Frameworks And Libraries</h5>
+                            <p>Flask, Vue, NumPy, Scikitlearn, Pytorch, OpenCV, Kafka and many more relevant for Data Science applications</p>
+                        </div>
+                    </div>
+                </div>
+                <!--Seventh-->
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="team-item" style="background-color: transparent; border-radius: 7px;">
+                        <div class="overflow-hidden team-item">
+                            <img class="img-fluid" src="img/business.png" alt="" style="height: 140px;">
+                            <h5 class="mb-0">Business Courses</h5>
+                            <p>Business Data Management, Business Analytics, Tools in Data Science, Financial Forensics, Market Research, Managerial Economics</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Team End -->
+
+
+<!-- FAQ Start -->
+<div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
+    <div class="container">
+        <div class="text-center">
+            <h1 class="mb-5">F.A.Q</h1>
+        </div>
+        <div class="faq-carousel owl-carousel owl-theme">
+            <!-- FAQ Item 1 -->
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h5>Does IIT Madras offer B.Sc in Programming & Data Science on-campus?</h5>
+                </div>
+                <div class="faq-answer">
+                    <p>No, there is no equivalent on-campus version. IIT Madras has carefully curated this exclusively as an online program.</p>
+                </div>
+            </div>
+            <!-- FAQ Item 2 -->
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h5>Will those enrolled in this program have access to IIT Madras campus facilities?</h5>
+                </div>
+                <div class="faq-answer">
+                    <p>All our program courses are taught in English. Hence, we expect a minimum proficiency in English language to participate in the program.</p>
+                </div>
+            </div>
+            <!-- FAQ Item 3 -->
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h5>I am a CA / B.Com Graduate / Lawyer / B.Sc Graduate / Mechanical engineer / MBBS student and do not have any knowledge of coding. Does this course cover the basics of coding before progressing to advanced levels?</h5>
+                </div>
+                <div class="faq-answer">
+                    <p>It is not necessary to have prior knowledge of coding to learn from our program. Our program is structured in such a way that once a learner starts from the Foundational level and progresses towards the Degree level, in sequence, they will obtain sufficient proficiency in Programming and Data Science.</p>
+                </div>
+            </div>
+            <!-- FAQ Item 4 -->
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h5>How long will it take to complete the online degree program if I am working?</h5>
+                </div>
+                <div class="faq-answer">
+                    <p>The full program can take anywhere between 3 and 6 years to complete. On average, we anticipate that a learner studying part-time will finish the degree in 4 to 5 years. A diploma can potentially be obtained faster (around 8 months - 2 years). Check the Academics page to better understand the program structure.</p>
+                </div>
+            </div>
+        </div>
+        <div class="text-center">
+            <a class="btn btn-primary py-3 px-5 mt-2" href="https://study.iitm.ac.in/ds/faq.html" 
+                style="
+                    background: linear-gradient(135deg, rgba(192, 192, 192, 0.8), rgba(255, 255, 255, 0.5));
+                    border: 1px solid rgba(255, 255, 255, 0.3);
+                    border-radius: 10px;
+                    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+                    color: #000;
+                    text-decoration: none;
+                    display: inline-block;
+                ">
+                Read More
+            </a>
+        </div>
+    </div>
+</div>
+<!-- FAQ End -->
+        
+
+    <!-- Footer Start -->
+    <div class="container-fluid text-light footer custom-footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s" style="background-color: #B71006;">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div >
+                    <h4 class="text-white mb-3">Contact Us</h4>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>support@study.iitm.ac.in</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>7850999966</p>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>IITM BS Degree Office, 3rd Floor, ICSR Building, IIT Madras, Chennai - 600036</p>
+
+                    <span style="font-size: 13px;line-height: 0.54rem;">Please use ONLY the above methods for any queries regarding the program.
+                        Our normal response time is 3 working days. It might take a little longer during busy periods.
+                        We will share Google Meet links during such periods.
+                        Due to the high volume of calls we receive every day, there might be long wait times.
+                        In some cases, you might have to call multiple times to successfully connect to us. 
+                    </span>
+                    
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-outline-light btn-social" href="https://x.com/iitm_bs"><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://www.facebook.com/iitmadrasbsdegree"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://api.whatsapp.com/message/IVROM2UN7XIJL1?autoload=1&app_absent=0"><i class="fab fa-whatsapp"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://www.linkedin.com/company/iit-madras-bs-datascience-programme/"><i class="fab fa-linkedin-in"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://www.instagram.com/iitmadras_bs/"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="copyright">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; <a class="border-bottom" href="#">IIT Madras</a>, All Right Reserved.
+
+                        <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+                        <br>Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a><br><br>
+                        Distributed By <a class="border-bottom" href="https://themewagon.com">ThemeWagon</a>
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <div class="footer-menu">
+                            <a>Privacy Policy</a>
+                            <a>Terms of Service</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
