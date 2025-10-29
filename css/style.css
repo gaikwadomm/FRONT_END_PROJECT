@@ -693,3 +693,35 @@ body {
     font-size: 14px;
   }
 }
+
+/* Major update / partnership cards */
+.update-card {
+  background: linear-gradient(180deg, #ffffff 0%, #fff8f8 100%);
+  border: 1px solid rgba(160, 16, 16, 0.08);
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(167, 20, 20, 0.06);
+}
+
+.update-card h4 {
+  color: #a0332d;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.update-card p {
+  color: #333;
+  margin-bottom: 16px;
+}
+
+.update-card .btn-outline-dark {
+  border-color: #a0332d;
+  color: #a0332d;
+  background: transparent;
+  border-radius: 8px;
+}
+
+.update-card .btn-outline-dark:hover {
+  background: rgba(160, 16, 16, 0.06);
+  transform: translateY(-3px);
+  transition: 0.2s;
+}
