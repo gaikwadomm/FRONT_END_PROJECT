@@ -30,3 +30,63 @@ body {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch; /* Adds smooth scrolling on iOS */
 }
+
+/*MULTI LANGUAGE*/
+.translation-links {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap if there's no space */
+    justify-content: center; /* Center-align items */
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+  }
+  
+  .translation-links li {
+    margin: 5px; /* Add spacing between items */
+  }
+  
+  .translation-links a {
+    text-decoration: none;
+    font-size: 14px; /* Adjust font size */
+    color: rgb(150, 145, 145);
+    white-space: nowrap; /* Prevent text wrapping for each language */
+  }
+  
+  /* Add horizontal scrolling for smaller devices */
+  @media (max-width: 768px) {
+    .translation-links {
+      overflow-x: auto; /* Allow horizontal scrolling */
+      flex-wrap: nowrap; /* Prevent items from wrapping */
+      justify-content: flex-start; /* Align items to the left */
+    }
+  
+    .translation-links::-webkit-scrollbar {
+      height: 4px; /* Optional: Customize scrollbar height */
+    }
+  
+    .translation-links::-webkit-scrollbar-thumb {
+      background: #ccc; /* Optional: Customize scrollbar color */
+    }
+  
+    .translation-links::-webkit-scrollbar-thumb:hover {
+      background: #aaa; /* Optional: Customize scrollbar hover effect */
+    }
+  
+    .translation-links a {
+      font-size: 12px; /* Reduce font size on small screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .translation-links {
+      flex-wrap: nowrap;
+      overflow-x: scroll; /* Add horizontal scrolling for very small screens */
+      justify-content: flex-start;
+    }
+  
+    .translation-links li {
+      margin: 3px; /* Reduce spacing */
+    }
+  }
+  
+  
